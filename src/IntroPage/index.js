@@ -1,14 +1,19 @@
 import React from "react";
+import { getButtonTexts } from "../LanguageSelector";
 import styles from "./styles.module.css";
 
 const IntroPage = ({ onNext, language }) => {
+  const buttonTexts = getButtonTexts(language);
+
+
   const getText = () => {
+    
     if (language === "Darija_ar") {
       return {
         title: "سلام, أنا منير, جني الدارجة",
         subtitle: "أنا هنا باش نعلمك الدارجة بطريقة ساهلة وممتعة",
       };
-    } 
+    }
 
     else if (language === "Darija_roman") {
       return {
@@ -17,7 +22,7 @@ const IntroPage = ({ onNext, language }) => {
       };
     }
 
-     else if (language === "English") {
+    else if (language === "English") {
       return {
         title: "Hello, I am Mounir, the Darija Genie",
         subtitle: "I am here to teach you Darija in a simple and fun way",
@@ -31,7 +36,7 @@ const IntroPage = ({ onNext, language }) => {
       }
     }
 
-   
+
   };
 
   const text = getText();
@@ -42,11 +47,14 @@ const IntroPage = ({ onNext, language }) => {
       <div className={styles.textContainer}>
         <h1 className={styles.title}>{text.title}</h1>
         <h1 className={styles.subtitle}>{text.subtitle}</h1>
-        
+
+
         <div className={styles.buttonContainerIntroPage}>
-        <button className="button" onClick={onNext}>Next</button>
-       
-         </div>
+          <button className="button" onClick={onNext}>
+            {buttonTexts.next}
+          </button>
+
+        </div>
       </div>
     </div>
   );

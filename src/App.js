@@ -4,7 +4,7 @@ import IntroPage from "./IntroPage";
 import ExplanationPage from "./ExplanationPage";
 import ChatScreen from "./ChatScreen";
 import LanguageSelector from "./LanguageSelector";
- 
+
 
 function App() {
   const [currentPage, setCurrentPage] = useState(0);
@@ -19,11 +19,25 @@ function App() {
   return (
     <div className="App">
       <LanguageSelector onLanguageChange={handleLanguageChange} />
-      {currentPage === 0 && <IntroPage onNext={handleNext} language={language} />}
-      {currentPage === 1 && (
-        <ExplanationPage onNext={handleNext} onPrevious={handlePrevious} />
-      )}
-      {currentPage === 2 && <ChatScreen onPrevious={handlePrevious} />}
+
+
+      {currentPage === 0 && <IntroPage
+        onNext={handleNext} language={language} />}
+
+
+      {currentPage === 1 && (<ExplanationPage
+        onNext={() => setCurrentPage(currentPage + 1)}
+        onPrevious={() => setCurrentPage(currentPage - 1)}
+        language={language}
+      />)}
+
+
+      {currentPage === 2 && <ChatScreen
+        onPrevious={() => setCurrentPage(currentPage - 1)}  language={language}   />
+
+
+
+      }
     </div>
   );
 }

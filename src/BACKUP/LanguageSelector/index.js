@@ -13,6 +13,8 @@ const LanguageSelector = ({ onLanguageChange }) => {
         <option value="English">English</option>
         <option value="Darija">Darija</option>
         <option value="Arabic">Arabic</option>
+        <option value="French">Français</option>
+      
       </select>
     </div>
   );
