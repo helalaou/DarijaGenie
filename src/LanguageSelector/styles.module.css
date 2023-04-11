@@ -1,0 +1,18 @@
+
+.logo {
+  font-size: 4rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
+
+.globeIcon {
+  /* image size */
+  width: 100px;
+  height: 100px;
+  /* image position */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+}

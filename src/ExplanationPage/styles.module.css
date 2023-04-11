@@ -1,0 +1,39 @@
+
+.logo {
+  font-size: 4rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
+
+ 
+
+.nextButton {
+  font-size: 1.2rem;
+  padding: 0.8rem 1.6rem;
+  border: none;
+  background-color: #4caf50;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.nextButton:hover {
+  background-color: #46a049;
+}
+
+
+.previousButton {
+  font-size: 1.2rem;
+  padding: 0.8rem 0.8rem;
+  border: none;
+  background-color: #4caf50;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  margin-right: 1rem;
+
+ }
+
+.previoustButton:hover {
+  background-color: #46a049;
+}
