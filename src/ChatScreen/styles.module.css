@@ -11,18 +11,15 @@
   margin-bottom: 2rem;
 }
 
-.previousButton {
-  font-size: 1.2rem;
-  padding: 0.8rem 0.8rem;
-  border: none;
-  background-color: #4caf50;
-  color: white;
-  cursor: pointer;
-  transition: background-color 0.2s;
-  margin-right: 1rem;
-
- }
-
-.previoustButton:hover {
-  background-color: #46a049;
+.buttonContainerChatScreen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  left: 10px;
+  right: 10px;
+  bottom: 60px;
+  padding: 0 16px;  
+  /* put it in the far left corner */ 
+  justify-content: space-between;
 }

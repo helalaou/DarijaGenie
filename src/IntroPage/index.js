@@ -1,12 +1,53 @@
 import React from "react";
 import styles from "./styles.module.css";
 
-const IntroPage = ({ onNext }) => {
+const IntroPage = ({ onNext, language }) => {
+  const getText = () => {
+    if (language === "Darija_ar") {
+      return {
+        title: "سلام, أنا منير, جني الدارجة",
+        subtitle: "أنا هنا باش نعلمك الدارجة بطريقة ساهلة وممتعة",
+      };
+    } 
+
+    else if (language === "Darija_roman") {
+      return {
+        title: "Salam, ana Mounir, Gini Darija",
+        subtitle: "Ana hna bach n3almek darija b tariqa sahla wa momti3a",
+      };
+    }
+
+     else if (language === "English") {
+      return {
+        title: "Hello, I am Mounir, the Darija Genie",
+        subtitle: "I am here to teach you Darija in a simple and fun way",
+      };
+    }
+    else if (language === "French") {
+      return {
+        title: "Bonjour, je suis Mounir, le génie Darija",
+        subtitle: "Je suis ici pour vous apprendre le Darija d'une manière simple et amusante",
+
+      }
+    }
+
+   
+  };
+
+  const text = getText();
+
   return (
     <div className={styles.container}>
-      <div className={styles.logo}>DarijaGenie</div>
-      <h1 className={styles.title}>Hi, my name is Jack, I'm a chatbot that can help you learn in a fun way</h1>
-      <button className={styles.nextButton} onClick={onNext}>Next</button>
+      <img className={styles.logo} src="Logo.png" alt="DarijaGenie Logo" />
+      <div className={styles.textContainer}>
+        <h1 className={styles.title}>{text.title}</h1>
+        <h1 className={styles.subtitle}>{text.subtitle}</h1>
+        
+        <div className={styles.buttonContainerIntroPage}>
+        <button className="button" onClick={onNext}>Next</button>
+       
+         </div>
+      </div>
     </div>
   );
 };

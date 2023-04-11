@@ -1,18 +1,37 @@
-
-.logo {
-  font-size: 4rem;
-  font-weight: bold;
-  margin-bottom: 1.5rem;
+.globeIcon {
+  font-size: 23px;
+  color: #000000;
+  margin-right: 8px;
 }
 
-.globeIcon {
-  /* image size */
-  width: 100px;
-  height: 100px;
-  /* image position */
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+.container {
+  position: fixed;
+  top: 16px;
+  left: 16px;
+  display: flex;
+  align-items: center;
+}
 
+
+.languageSelect {
+  appearance: none;
+  outline: none;
+  border: 1px solid #58a700;
+  padding: 8px 12px;
+  font-size: 13px;
+  font-weight: bold;
+  color: #58a700;
+  background-color: #ffffff;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.1s ease;
+}
+
+.languageSelect:hover {
+  border-color: #58cc02;
+  color: #58cc02;
+}
+
+.languageSelect:active {
+  background-color: #f2f2f2;
 }

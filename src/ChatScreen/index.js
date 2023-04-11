@@ -12,7 +12,9 @@ return (
 <div className={styles.qrCodes}>
 {/ Add QR code images and links here */}
 </div>
-<button className={styles.previousButton} onClick={onPrevious}>Previous</button>
+ <div className={styles.buttonContainerChatScreen}>
+<button className="button" onClick={onPrevious}>Previous</button>
+</div>
 </div>
 );
 };

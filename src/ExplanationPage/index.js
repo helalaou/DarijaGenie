@@ -8,10 +8,12 @@ const ExplanationPage = ({ onNext, onPrevious }) => {
       <div className={styles.info}>
         {/* Add your text and table (image) here */}
       </div>
-      <div className={styles.buttons}>
-        <button className={styles.previousButton} onClick={onPrevious}>Previous</button>
-        <button className={styles.nextButton} onClick={onNext}>Next</button>
+
+       <div className={styles.buttonContainerExplanationPage} >
+      <button className="button" onClick={onPrevious}>Previous</button>
+        <button className="button" onClick={onNext}>Next</button>
       </div>
+
     </div>
   );
 };
