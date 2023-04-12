@@ -1,6 +1,6 @@
 .globeIcon {
   font-size: 23px;
-  color: #000000;
+  color: #f9c603;
   margin-right: 8px;
 }
 
@@ -16,22 +16,22 @@
 .languageSelect {
   appearance: none;
   outline: none;
-  border: 1px solid #58a700;
+  border: 1px solid #f9c603;
   padding: 8px 12px;
-  font-size: 13px;
+  font-size: 18px;
   font-weight: bold;
-  color: #58a700;
-  background-color: #ffffff;
+  color: #f9c603;
+  background-color: #c81f47;
   border-radius: 8px;
   cursor: pointer;
   transition: all 0.1s ease;
 }
 
 .languageSelect:hover {
-  border-color: #58cc02;
-  color: #58cc02;
+  border-color: #f9c603;
+  color: #f9c603;
 }
 
 .languageSelect:active {
-  background-color: #f2f2f2;
+  background-color: #c81f47;
 }

@@ -2,9 +2,12 @@
 import "font-awesome/css/font-awesome.min.css";
 import React from "react";
 import styles from "./styles.module.css";
+import typeSound from "../typeSound.wav";
 
 const LanguageSelector = ({ onLanguageChange, language }) => {
   const handleChange = (event) => {
+    const audio = new Audio(typeSound);
+    audio.play();
     onLanguageChange(event.target.value);
   };
 

@@ -33,15 +33,15 @@
 .button {
   display: inline-block;
   padding: 12px 24px;
-  font-size: 16px;
+  font-size: 25px;
   font-weight: bold;
   text-align: center;
   text-decoration: none;
   color: #ffffff;
-  background-color: #58cc02;
+  background-color: #66a24a;
   border: none;
   border-radius: 50px;
-  box-shadow: 0 5px 0 #58a700;
+  box-shadow: 0 5px 0 #34682a;
   cursor: pointer;
   transition: all 0.1s ease;
 }

@@ -27,6 +27,12 @@
   margin-left: -80px;
   margin-top: 60px;
 }
+.logo:hover {
+  transform: translateY(-10px);
+  transition: transform 0.3s ease;
+}
+
+
 
 .textContainer {
   width: 50%;
