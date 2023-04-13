@@ -1,9 +1,6 @@
 body {
   text-align: center;
-  background: linear-gradient(135deg, #ffff,  #98c157);
-  /* background: linear-gradient(135deg,  #98c157,#ffff); */
-
-  /* background: linear-gradient(135deg, #C1272D, #98c157,#c81f47 , #58cc02); */
+  background: radial-gradient(circle, #BAE491, #008962);
 
   background-size: 200% 200%;
   animation: animatedGradient 10s ease infinite;
