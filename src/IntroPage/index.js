@@ -19,7 +19,7 @@ const IntroPage = ({ onNext, language }) => {
 
   const getGreeting = () => {
     if (language === "Darija_ar") {
-      return "سلام";
+      return "Salam سلام";
 
     } else if (language === "Darija_roman") {
       return "Salam";
@@ -76,7 +76,7 @@ const IntroPage = ({ onNext, language }) => {
       />
 
       <img
-        className={`${styles.teapot} `} src="teapotNiit.png"
+        className={`${styles.teapot} `} src="teapot.png"
         alt="Teapot"
       />
 
@@ -86,8 +86,8 @@ const IntroPage = ({ onNext, language }) => {
       />
 
       <div className={styles.textContainer}>
+      <h1 className={styles.greetingBubble}>{greeting}</h1>
 
-        <h1 className={styles.greeting} style={{ color: "#f9c603", fontSize: "4rem" }}>{greeting}</h1>
         <h1 className={styles.title} style={{ color: "#c92933", fontSize: "2.5rem" }}>{title}</h1>
         <h1 className={styles.subtitle} style={{ color: "#882331", fontSize: "1.5rem" }}>{subtitle}</h1>
 
