@@ -10,16 +10,13 @@ const ChatScreen = ({
 
     return (
         
-        <div className={styles.container}>
-            <div className={styles.logo}>DarijaGenie</div>
+        <div className={styles.container}> 
             <div className={styles.chatBox}>
 
-
-                {/* Integrate chatbox with external service here /}
-</div>
-<div className={styles.qrCodes}>
-{/ Add QR code images and links here */}
-
+            <div className="title">
+      This page will contain the chatbot interface as well as QR codes for integration with MS Teams, Telegram, Messenger, and other platforms.
+       
+      </div>
 
             </div>
             <div className={styles.buttonContainerChatScreen}>

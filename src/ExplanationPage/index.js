@@ -8,11 +8,10 @@ const ExplanationPage = ({ onNext, onPrevious, language }) => {
 
   return (
     <div className={styles.container}>
-      <div className={styles.logo}>DarijaGenie</div>
-      <div className={styles.info}>
-        {/* Add your text and table (image) here */}
+      <div className="title"> 
+       This page will contain information about the pedagogical approach of the app - in other words - how to play, the available scenarios, etc.
       </div>
-
+       
       <div className={styles.buttonContainerExplanationPage} >
         <button className="button" onClick={onPrevious}>{buttonTexts.previous}</button>
         <button className="button" onClick={onNext}>{buttonTexts.next}</button>
