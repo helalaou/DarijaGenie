@@ -22,8 +22,8 @@
   align-items: center; 
   position: fixed;
   left: 0%;
-  right: -88%;
-  bottom: 4%;
+  right: -80%;
+  bottom: 3%;
   padding: 0 16px;
 }
 
@@ -39,8 +39,8 @@
   font-size: 4rem;
   color: #254B16;
   font-family: 'El Messiri', sans-serif;
-  right: -1%;
-  top: -530px
+  right: 0%;
+  top: -515px
 }
 
 .greetingBubble::before {
@@ -77,7 +77,7 @@
   font-family: 'Scheherazade', serif;
   position: absolute;
   top: 43%;
-  left: 60%;
+  left: 53%;
   transform: translate(-50%, -50%);
 }
 
@@ -86,7 +86,7 @@
   font-size: 2.3rem;
   position: absolute;
   top: 62%;
-  left: 55%;
+  left: 53%;
   font-family: 'El Messiri', sans-serif;
 
   transform: translate(-50%, -50%);
@@ -95,48 +95,50 @@
 
 .titlefr {
   color: #c92933;
-  font-size: 3.77rem;
+  font-size: 3.70rem;
   font-weight: bold;
   font-family: 'El Messiri', sans-serif;
-
+  line-height: 90%; 
   position: absolute;
-  top: 43%;
-  left: 59.8%; 
-  white-space: nowrap;
+  top: 48%;
+  left: 52.2%;  
   transform: translate(-50%, -50%);
 }
+
 
 .subtitlefr {
   color: #882331;
   font-size: 2.2rem;
   font-family: 'El Messiri', sans-serif;
   position: absolute;
-  top: 58%;
-  left: 58%;
+  top: 64%;
+  left: 53%;
+  line-height: 90%;
   position: absolute;
   white-space: pre-line;
   transform: translate(-50%, -50%);
 }
 
 .titleeng {
-  color: #c92933;
-  font-size: 4.23rem;
-  font-weight: bold;
-  font-family: 'El Messiri', sans-serif;
-  position: absolute;
-  top: 43%;
-  left: 58.5%; 
-  white-space: nowrap;
-  transform: translate(-50%, -50%);
+    color: #c92933;
+    font-size: 4rem;
+    font-weight: bold;
+    font-family: 'El Messiri', sans-serif;
+    line-height: 90%; 
+    position: absolute;
+    top: 48%;
+    left: 52.2%;  
+    transform: translate(-50%, -50%);
 }
 
 .subtitleeng {
   color: #882331;
-  font-size: 2.5rem;
+  font-size: 2.3rem;
   font-family: 'El Messiri', sans-serif;
   position: absolute;
-  top: 59%;
-  left: 57%;
+  top: 65%;
+  left: 54%;
+  line-height: 90%; 
   position: absolute;
   white-space: pre-line;
   transform: translate(-50%, -50%);
@@ -149,9 +151,9 @@
   font-weight: bold;
   font-family: 'El Messiri', sans-serif;
   position: absolute;
-  top: 43%;
-  left: 57%; 
-  white-space: nowrap;
+  top: 49%;
+  left: 52%; 
+  line-height: 90%; 
   transform: translate(-50%, -50%);
 }
 
@@ -160,8 +162,9 @@
   font-size: 2.3rem;
   font-family: 'El Messiri', sans-serif;
   position: absolute;
-  top: 59%;
-  left: 55%;
+  top: 68%;
+  left: 52%;
+  line-height: 90%; 
   position: absolute;
   white-space: pre-line;
   transform: translate(-50%, -50%);

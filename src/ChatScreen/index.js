@@ -13,10 +13,7 @@ const ChatScreen = ({
         <div className={styles.container}> 
             <div className={styles.chatBox}>
 
-            <div className="title">
-      This page will contain the chatbot interface as well as QR codes for integration with MS Teams, Telegram, Messenger, and other platforms.
        
-      </div>
 
             </div>
             <div className={styles.buttonContainerChatScreen}>
