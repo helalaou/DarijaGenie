@@ -7,7 +7,7 @@ import ChatScreen from "./ChatScreen";
 import LanguageSelector from "./LanguageSelector";
 
 import clickSound from "./clickSound.wav";
-import magicSound from "./magicSound.wav";
+import magicSound from "./magicSound.mp3";
 
 const App = () => {
   const [showOverlay, setShowOverlay] = useState(true);
