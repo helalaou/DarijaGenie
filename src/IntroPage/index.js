@@ -1,7 +1,5 @@
 import { getButtonTexts } from "../LanguageSelector";
-import styles from "./styles.module.css";
-import React, { useState, useEffect } from "react";
-
+import styles from "./styles.module.css"; 
 
 const IntroPage = ({ onNext, language }) => { 
   const buttonTexts = getButtonTexts(language);
@@ -25,16 +23,16 @@ const IntroPage = ({ onNext, language }) => {
 
   const getTitle = () => {
     if (language === "Darija_ar") {
-      return ".أنا منير، جـنـي الدارجة"
+      return ".أنا سلطان، جـنـي الدارجة"
 
     } else if (language === "Darija_roman") {
-      return "Ana Mounir, jenii Darija.";
+      return "Ana Sutlan, jenii Darija.";
 
     } else if (language === "English") {
-      return "I'm Mounir, the Darija Genie";
+      return "I'm Sultan, the Darija Genie";
 
     } else if (language === "French") {
-      return "Je suis Mounir, le génie du Darija.";
+      return "Je suis Sultan, le génie du Darija.";
     }
   };
 
@@ -46,7 +44,7 @@ const IntroPage = ({ onNext, language }) => {
       return "Wajed tet3alem Darija b tari9a sahla w momte3a? Yallah nbadaw!";
 
     } else if (language === "English") {
-      return "Ready to learn Moroccan Darija in a fun and easy way? Let's go!";
+      return "Ready to learn Moroccan Darija in a fun and  easy way? Let's go!";
 
     } else if (language === "French") {
       return "Prêt à apprendre le dialecte marocain de manière amusante et facile ? Commençons !";

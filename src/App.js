@@ -14,6 +14,7 @@ const App = () => {
   const [startAnimation, setStartAnimation] = useState(false);
   const [currentPage, setCurrentPage] = useState(0);
   const [language, setLanguage] = useState("Darija_ar");
+  const [rotatingText, setRotatingText] = useState("Grant my language wishes");
 
   const logoRef = useRef(null);
 
@@ -28,14 +29,33 @@ const App = () => {
     }
   }, [startAnimation]);
 
+ 
+  useEffect(() => {
+    const texts = [
+      "Grant my language wishes",
+      "Exaucez mes désirs linguistiques",
+      "لبي ليا امنياتي اللغوية",
+      "Lebbi lia omniati alughawia",
+    ];
+  
+    let currentIndex = 0;
+  
+    const textInterval = setInterval(() => {
+      currentIndex = (currentIndex + 1) % texts.length;
+      setRotatingText(texts[currentIndex]);
+    }, 2300);
+  
+    return () => clearInterval(textInterval);
+  }, []);
+
+  
+
   const handleEnter = () => {
     const magicAudio = new Audio(magicSound);
     magicAudio.play();
     setShowOverlay(false);
     setStartAnimation(true);
   };
-
-
 
   const handleNext = () => {
     setCurrentPage(currentPage + 1);
@@ -51,18 +71,26 @@ const App = () => {
 
   const handleLanguageChange = (newLanguage) => {
     setLanguage(newLanguage);
-
   };
 
   return (
     <div className="App">
       {showOverlay && (
         <div className="overlay">
-          <div className="enterButtonContainer">
-            <button className="enterButton" onClick={handleEnter}>
-              Enter
-            </button>
-          </div>
+  <div className="enterButtonContainer">
+    <button className="enterButton" onClick={handleEnter}>
+      {rotatingText}
+    </button>
+    <div className="sparkle"></div>
+    <div className="sparkle"></div>
+    <div className="sparkle"></div>
+    <div className="sparkle"></div>
+    <div className="sparkle"></div>
+    <div className="sparkle"></div>
+  </div>
+ 
+
+
         </div>
       )}
 
@@ -96,10 +124,11 @@ const App = () => {
           {currentPage === 2 && (
             <ChatScreen onPrevious={handlePrevious} language={language} />
           )}
-        </div>
-      )}
-    </div>
-  );
+       
+       </div>
+  )}
+</div>
+);
 };
 
 export default App;
