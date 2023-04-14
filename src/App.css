@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Scheherazade&display=swap');
- 
+@import url('https://fonts.googleapis.com/css2?family=El+Messiri:wght@300;400;500;700&display=swap');
 
 .container {
   display: flex;
@@ -16,25 +16,7 @@
   align-items: flex-start;
 }
 
-.title {
-  color: #c92933;
-  font-size: 3rem;
-  font-weight: bold;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  position: absolute;
-  top: 43%;
-  left: 60%;
-  transform: translate(-50%, -50%);
-}
 
-.subtitle {
-  color: #882331;
-  font-size: 1.7rem;
-  position: absolute;
-  top: 55%;
-  left: 55%;
-  transform: translate(-50%, -50%);
-}
 
 
 /* Gamified Button, like duolingo */

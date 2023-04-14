@@ -13,7 +13,7 @@
   flex-direction: column;
   align-items: flex-start;
   position: relative;
-}
+} 
 
 
 .buttonContainerIntroPage {
@@ -66,4 +66,103 @@
   top: 2px;
   right: 4px;
   color: #666;
+}
+
+
+
+.titlear {
+  color: #c92933;
+  font-size: 5rem;
+  font-weight: bold;
+  font-family: 'Scheherazade', serif;
+  position: absolute;
+  top: 43%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+}
+
+.subtitlear {
+  color: #882331;
+  font-size: 2.3rem;
+  position: absolute;
+  top: 62%;
+  left: 55%;
+  font-family: 'El Messiri', sans-serif;
+
+  transform: translate(-50%, -50%);
+}
+
+
+.titlefr {
+  color: #c92933;
+  font-size: 3.77rem;
+  font-weight: bold;
+  font-family: 'El Messiri', sans-serif;
+
+  position: absolute;
+  top: 43%;
+  left: 59.8%; 
+  white-space: nowrap;
+  transform: translate(-50%, -50%);
+}
+
+.subtitlefr {
+  color: #882331;
+  font-size: 2.2rem;
+  font-family: 'El Messiri', sans-serif;
+  position: absolute;
+  top: 58%;
+  left: 58%;
+  position: absolute;
+  white-space: pre-line;
+  transform: translate(-50%, -50%);
+}
+
+.titleeng {
+  color: #c92933;
+  font-size: 4.23rem;
+  font-weight: bold;
+  font-family: 'El Messiri', sans-serif;
+  position: absolute;
+  top: 43%;
+  left: 58.5%; 
+  white-space: nowrap;
+  transform: translate(-50%, -50%);
+}
+
+.subtitleeng {
+  color: #882331;
+  font-size: 2.5rem;
+  font-family: 'El Messiri', sans-serif;
+  position: absolute;
+  top: 59%;
+  left: 57%;
+  position: absolute;
+  white-space: pre-line;
+  transform: translate(-50%, -50%);
+}
+
+
+.titledarija {
+  color: #c92933;
+  font-size: 4.5rem;
+  font-weight: bold;
+  font-family: 'El Messiri', sans-serif;
+  position: absolute;
+  top: 43%;
+  left: 57%; 
+  white-space: nowrap;
+  transform: translate(-50%, -50%);
+}
+
+.subtitledarija {
+  color: #882331;
+  font-size: 2.3rem;
+  font-family: 'El Messiri', sans-serif;
+  position: absolute;
+  top: 59%;
+  left: 55%;
+  position: absolute;
+  white-space: pre-line;
+  transform: translate(-50%, -50%);
 }
