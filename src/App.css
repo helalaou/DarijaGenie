@@ -1,33 +1,39 @@
-.App {
-  text-align: center; 
+ 
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  position: relative;
 
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.textContainer {
+  width: 50%;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: flex-start;
 }
 
-.App-link {
-  color: #61dafb;
+.title {
+  color: #c92933;
+  font-size: 3rem;
+  font-weight: bold;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  position: absolute;
+  top: 43%;
+  left: 60%;
+  transform: translate(-50%, -50%);
 }
+
+.subtitle {
+  color: #882331;
+  font-size: 1.7rem;
+  position: absolute;
+  top: 55%;
+  left: 55%;
+  transform: translate(-50%, -50%);
+}
+
 
 /* Gamified Button, like duolingo */
 .button {
@@ -53,12 +59,88 @@
 
  
 
+.teapot {
+  position: absolute;
+  left: 4%;
+  bottom: -2%;
+  width: 9.4%;
+  height: auto;
+}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.backgroundHeader::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('./BGH.png');
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  z-index: -2;
+}
+
+.shadow {
+  position: absolute;
+  left: 1.05%;
+  bottom: -6.5%;
+  width: 30%;
+  height: auto;
+}
+
+.logo {
+  max-width: 40%;
+  object-fit: contain;
+  margin-left: -64%;
+  max-height: 100%;
+  margin-top: 5%;
+}
+
+.logo:hover {
+  transform: translateY(-10px);
+  transition: transform 0.3s ease;
+}
+ 
+
+.logoFloating {
+  animation: floating 2.3s ease infinite;
+}
+
+.logoAppearing {
+  animation: genieAppearing 2s;
+}
+
+@keyframes genieAppearing {
+  0% {
+    transform: translateX(-100%) translateY(70%) scale(0.2);
+    opacity: 0;
   }
-  to {
-    transform: rotate(360deg);
+
+  50% {
+    transform: translateX(0) translateY(0) scale(1.2);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateX(0) translateY(0) scale(1);
+    opacity: 1;
   }
 }
+
+
+@keyframes floating {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+

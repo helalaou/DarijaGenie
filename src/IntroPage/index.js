@@ -3,62 +3,53 @@ import styles from "./styles.module.css";
 import React, { useState, useEffect } from "react";
 
 
-const IntroPage = ({ onNext, language }) => {
-  const [isFirstLoad, setIsFirstLoad] = useState(true);
+const IntroPage = ({ onNext, language }) => { 
   const buttonTexts = getButtonTexts(language);
 
-
-  useEffect(() => {
-    if (isFirstLoad) {
-      setTimeout(() => {
-        setIsFirstLoad(false);
-      }, 1000); // Duration of the genieAppearing animation
-    }
-  }, [isFirstLoad]);
-
+ 
 
   const getGreeting = () => {
     if (language === "Darija_ar") {
       return "Salam سلام";
 
     } else if (language === "Darija_roman") {
-      return "Salam";
+      return "Salam سلام";
 
     } else if (language === "English") {
-      return "Hello";
+      return "Hello مرحبا";
 
     } else if (language === "French") {
-      return "Bonjour";
+      return "Bonjour مرحبا";
     }
   };
 
   const getTitle = () => {
     if (language === "Darija_ar") {
-      return "أنا هنا لتعليم الدارجة بطريقة سهلة وممتعة";
+      return ".أنا منير، جـنـي الدارجة"
 
     } else if (language === "Darija_roman") {
-      return "Ana hna bach n3almek darija b tariqa sahla wa momti3a";
+      return "Ana Mounir, jenii Darija.";
 
     } else if (language === "English") {
-      return "I am here to teach you Darija in a simple and fun way";
+      return "I'm Mounir, the Darija Genie";
 
     } else if (language === "French") {
-      return "Je suis ici pour vous apprendre le Darija d'une manière simple et amusante";
+      return "Je suis Mounir, le génie du Darija.";
     }
   };
 
   const getSubtitle = () => {
     if (language === "Darija_ar") {
-      return "أنا سأساعدك على تعلم الدارجة بطريقة سهلة وممتعة";
-    } else if (language === "Darija_roman") {
+      return "!واجد تتعلم الدارجة بطريقة سهلة وممتعة؟ يلاه نبداو";
+            } else if (language === "Darija_roman") {
 
-      return "Ana sa3di bik n3almek darija b tariqa sahla wa momti3a";
+      return "Wajed tet3alem Darija b tari9a sahla w momte3a? Yallah nbadaw!";
 
     } else if (language === "English") {
-      return "Ready to learn Moroccan Dialect in a fun and easy way? Let's get started! ";
+      return "Ready to learn Moroccan Darija in a fun and easy way? Let's go!";
 
     } else if (language === "French") {
-      return "Je vais vous aider à apprendre le Darija d'une manière simple et amusante";
+      return "Prêt à apprendre le dialecte marocain de manière amusante et facile ? Commençons !";
     }
   };
 
@@ -67,37 +58,22 @@ const IntroPage = ({ onNext, language }) => {
   const title = getTitle();
   const subtitle = getSubtitle();
 
-  return (
-    <div className={`${styles.container} ${styles.backgroundHeader}`}>
-      <img
-        className={`${styles.logo} ${!isFirstLoad ? styles.logoFloating : styles.logoAppearing}`}
-        src="Logo.png"
-        alt="DarijaGenie Logo"
-      />
+  return ( 
+     
+      <div className={ styles.containerIntroPage }>
+        
+       <h1 className={styles.greetingBubble}>{greeting}</h1>
 
-      <img
-        className={`${styles.teapot} `} src="teapot.png"
-        alt="Teapot"
-      />
-
-      <img
-        className={` ${styles.shadow}`} src="shadow.png"
-        alt="Shadow"
-      />
-
-      <div className={styles.textContainer}>
-      <h1 className={styles.greetingBubble}>{greeting}</h1>
-
-        <h1 className={styles.title} style={{ color: "#c92933", fontSize: "2.5rem" }}>{title}</h1>
-        <h1 className={styles.subtitle} style={{ color: "#882331", fontSize: "1.5rem" }}>{subtitle}</h1>
+      <h1 className="title">{title}</h1>
+      <h1 className="subtitle">{subtitle}</h1>
 
         <div className={styles.buttonContainerIntroPage}>
           <button className="button" onClick={onNext}>
             {buttonTexts.next}
           </button>
-        </div>
+        </div> 
       </div>
-    </div>
+    
   );
 };
 

@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./App.css";
+
 import IntroPage from "./IntroPage";
 import ExplanationPage from "./ExplanationPage";
 import ChatScreen from "./ChatScreen";
@@ -7,7 +8,19 @@ import LanguageSelector from "./LanguageSelector";
 
 import clickSound from  "./clickSound.wav";
 
-function App() {
+
+const App = () => {
+  const [isFirstLoad, setIsFirstLoad] = useState(true);
+
+  useEffect(() => {
+    if (isFirstLoad) {
+      setTimeout(() => {
+        setIsFirstLoad(false);
+      }, 1000); // Duration of the genieAppearing animation
+    }
+  }, [isFirstLoad]);
+
+
   const [currentPage, setCurrentPage] = useState(0);
   const [language, setLanguage] = useState("Darija_ar");
 
@@ -27,8 +40,21 @@ function App() {
     setLanguage(newLanguage);
   };
 
+
   return (
-    <div className="App">
+
+  <div className="App">
+      <div className={`container backgroundHeader`}>
+        <img
+          className={`logo ${!isFirstLoad ? "logoFloating" : "logoAppearing"}`}
+          src="Logo.png"
+          alt="DarijaGenie Logo"
+        />
+        <img className="teapot"src="teapot.png" alt="Teapot"  />
+        <img className="shadow" src="shadow.png" alt="Shadow" />
+     
+      </div>
+    
       <audio id="click-sound">
         <source src={clickSound} type="audio/wav" />
       </audio>
@@ -53,4 +79,4 @@ function App() {
   );
 }
 
-export default App;
+export default App; 
