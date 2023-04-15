@@ -33,6 +33,8 @@
   box-shadow: 0 5px 0 #34682a;
   cursor: pointer;
   transition: all 0.1s ease;
+  font-family: 'El Messiri', sans-serif;
+   
 }
 
 .button:active {
@@ -54,9 +56,9 @@
 
 .shadow {
   position: absolute;
-  left: 5%;
+  left: 3.5%;
   bottom: -9%;
-  width: 30%;
+  width: 27.5%;
   height: auto;
 }
 

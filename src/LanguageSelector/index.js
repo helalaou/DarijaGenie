@@ -27,7 +27,7 @@ const LanguageSelector = ({ onLanguageChange, language }) => {
 const getButtonTexts = (language) => {
   const buttonTexts = {
     Darija_ar: { next: "زيد", previous: "رجع" },
-    Darija_roman: { next: "zid", previous: "rja3" },
+    Darija_roman: { next: "Zid", previous: "Rja3" },
     English: { next: "Next", previous: "Previous" },
     French: { next: "Suivant", previous: "Précédent" },
   };

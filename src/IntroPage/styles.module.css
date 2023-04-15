@@ -30,7 +30,7 @@
   justify-content: center;
   align-items: center; 
   position: fixed;
-  left: 0%;
+  left: -2%; 
   right: -80%;
   bottom: 3%;
   padding: 0 16px;
@@ -91,7 +91,7 @@
 }
 
 .subtitlear {
-  color: #882331;
+  color: #8f1e15;
   font-size: 2.3rem;
   position: absolute;
   top: 62%;
