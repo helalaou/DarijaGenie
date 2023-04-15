@@ -23,3 +23,26 @@
   background-size: 100%;
   z-index: -2;
 }
+
+.text {
+  color: #6e1a29;
+  font-size: 1.6rem;
+  font-weight: bold;
+  font-family: 'El Messiri', sans-serif;
+  position: absolute;
+  top: 55.5%;
+  left: 53.2%;
+  line-height: 105%;
+  white-space: normal;
+  transform: translate(-50%, -50%);
+  animation: glow 1.2s ease-in-out infinite alternate;
+} 
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px #f4b640, 0 0 20px #f4b640, 0 0 30px #6e1a29, 0 0 40px #f4b640, 0 0 50px #6e1a29, 0 0 60px #eeac32, 0 0 70px #d80d4e;
+  }
+  to {
+    text-shadow: 0 0 10px #eeac32, 0 0 20px #eeac32, 0 0 30px #6e1a29, 0 0 40px #eeac32, 0 0 50px #6e1a29, 0 0 60px #6e1a29, 0 0 70px #eeac32;
+  }
+}
