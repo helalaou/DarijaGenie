@@ -24,6 +24,8 @@ const App = () => {
   const logoRef = useRef(null);
   const audioRef = useRef(null);  
   const [volume, setVolume] = useState(0.5);  
+  const [showControls, setShowControls] = useState(false);
+
 
 
   useEffect(() => {
@@ -84,18 +86,20 @@ const App = () => {
     magicAudio.play();
     setShowOverlay(false);
     setStartAnimation(true);
+    setShowControls(true);  
   };
+
 
   const handleNext = () => {
     setCurrentPage(currentPage + 1);
-    const audio = new Audio(clickSound); // create new Audio instance
-    audio.play(); // play the click sound
+    const audio = new Audio(clickSound);  
+    audio.play();  
   };
 
   const handlePrevious = () => {
     setCurrentPage(currentPage - 1);
-    const audio = new Audio(clickSound); // create new Audio instance
-    audio.play(); // play the click sound
+    const audio = new Audio(clickSound);  
+    audio.play();  
   };
 
   const handleLanguageChange = (newLanguage) => {
@@ -106,20 +110,21 @@ const App = () => {
   return (
     <div className="App">
       <audio ref={audioRef} src={soundtrack} loop />
-      <div className="speakerIconContainer" onClick={handleSoundToggle}>
-        <i className={`speakerIcon fa ${soundOn ? "fa-volume-up" : "fa-volume-off"}`}></i>
-        
-        <input
-          className="volumeslider"
-          type="range"
-          min="0"
-          max="1"
-          step="0.01"
-          value={volume}
-          onChange={handleVolumeChange}
-        />
-      </div>
+      {showControls && (  
+        <div className="speakerIconContainer" onClick={handleSoundToggle}>
+          <i className={`speakerIcon fa ${soundOn ? "fa-volume-up" : "fa-volume-off"}`}></i>
 
+          <input
+            className="volumeslider"
+            type="range"
+            min="0"
+            max="1"
+            step="0.01"
+            value={volume}
+            onChange={handleVolumeChange}
+          />
+        </div>
+      )}
 
       {showOverlay && (
         <div className="overlay">
