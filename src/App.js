@@ -12,7 +12,7 @@ import soundtrack from "./soundtrack.mp3";
  
 
 
-
+ 
 const App = () => {
 
   const [showOverlay, setShowOverlay] = useState(true);
@@ -77,6 +77,8 @@ const App = () => {
     }
   };
 
+
+
   const handleEnter = () => {
     const magicAudio = new Audio(magicSound);
     magicAudio.play();
@@ -106,6 +108,7 @@ const App = () => {
       <audio ref={audioRef} src={soundtrack} loop />
       <div className="speakerIconContainer" onClick={handleSoundToggle}>
         <i className={`speakerIcon fa ${soundOn ? "fa-volume-up" : "fa-volume-off"}`}></i>
+        
         <input
           className="volumeslider"
           type="range"

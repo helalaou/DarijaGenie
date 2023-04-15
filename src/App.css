@@ -289,7 +289,7 @@
 .speakerIconContainer {
   position: fixed;
   top: 1%;
-  right: 0.7%;
+  right: 0.25%;
   z-index: 200;
   display: flex;
   justify-content: center;
@@ -305,7 +305,6 @@
 .speakerIcon {
   font-size: 100%;
   cursor: pointer;
-
   color: #f9c603;
 }
 
@@ -313,16 +312,17 @@
 
 .volumeslider {
   position: fixed;
-  top: 50%;
-  left: -50%;
+  top: 5.1%;
+  right: 0.25%;
   z-index: 200;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 40px;
   height: 40px;
-  background-color: rgba(255, 255, 255, 0.8);
-  border-radius: 50%;
-  opacity: 0;
-  transition: opacity 0.3s ease;
+  background-color: gold;
+  border-radius: 50%; 
+  color: gold; 
+  
 }
+ 
