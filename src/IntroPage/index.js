@@ -77,7 +77,9 @@ const IntroPage = ({ onNext, language }) => {
 
 
   return (
-    <div className={styles.containerIntroPage}>
+
+    <div className={styles.backgroundHeader}>
+     
 
       <h1 className={styles.greetingBubble}>{greeting}</h1>
       <h1 className={styles[getTitleStyle()]}>{title}</h1>
@@ -88,9 +90,9 @@ const IntroPage = ({ onNext, language }) => {
         <button className="button" onClick={onNext}>
           {buttonTexts.next}
         </button>
-      </div>
+       
     </div>
-
+</div>
   );
 };
 

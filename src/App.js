@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
-import "./App.css";
-
+import "./App.css"; 
+import "font-awesome/css/font-awesome.min.css";
 import IntroPage from "./IntroPage";
 import ExplanationPage from "./ExplanationPage";
 import ChatScreen from "./ChatScreen";
@@ -8,15 +8,23 @@ import LanguageSelector from "./LanguageSelector";
 
 import clickSound from "./clickSound.wav";
 import magicSound from "./magicSound.mp3";
+import soundtrack from "./soundtrack.mp3";  
+ 
+
+
 
 const App = () => {
+
   const [showOverlay, setShowOverlay] = useState(true);
   const [startAnimation, setStartAnimation] = useState(false);
-  const [currentPage, setCurrentPage] = useState(0);
   const [language, setLanguage] = useState("Darija_ar");
+  const [soundOn, setSoundOn] = useState(false);  
+  const [currentPage, setCurrentPage] = useState(0);
   const [rotatingText, setRotatingText] = useState("Grant my language wishes");
-
   const logoRef = useRef(null);
+  const audioRef = useRef(null);  
+  const [volume, setVolume] = useState(0.5);  
+
 
   useEffect(() => {
     if (logoRef.current) {
@@ -49,6 +57,25 @@ const App = () => {
   }, []);
 
   
+  const handleSoundToggle = () => {
+    setSoundOn(!soundOn);
+    if (audioRef.current) {
+      if (soundOn) {
+        audioRef.current.pause();
+      } else {
+        audioRef.current.play();
+      }
+    }
+  };
+
+
+  const handleVolumeChange = (e) => {
+    const newVolume = parseFloat(e.target.value);
+    setVolume(newVolume);
+    if (audioRef.current) {
+      audioRef.current.volume = newVolume;
+    }
+  };
 
   const handleEnter = () => {
     const magicAudio = new Audio(magicSound);
@@ -73,8 +100,24 @@ const App = () => {
     setLanguage(newLanguage);
   };
 
+
   return (
     <div className="App">
+      <audio ref={audioRef} src={soundtrack} loop />
+      <div className="speakerIconContainer" onClick={handleSoundToggle}>
+        <i className={`speakerIcon fa ${soundOn ? "fa-volume-up" : "fa-volume-off"}`}></i>
+        <input
+          className="volumeslider"
+          type="range"
+          min="0"
+          max="1"
+          step="0.01"
+          value={volume}
+          onChange={handleVolumeChange}
+        />
+      </div>
+
+
       {showOverlay && (
         <div className="overlay">
   <div className="enterButtonContainer">

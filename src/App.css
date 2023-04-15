@@ -9,14 +9,13 @@
   position: relative;
 
 }
+
 .textContainer {
   width: 50%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 }
-
-
 
 
 /* Gamified Button, like duolingo */
@@ -41,7 +40,7 @@
   transform: translateY(5px);
 }
 
- 
+
 
 .teapot {
   position: absolute;
@@ -51,20 +50,7 @@
   height: auto;
 }
 
-.backgroundHeader::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 118%;
-  background-image: url('./Background1.png');
-  filter: opacity(1);
-  background-position: center top;
-  background-repeat: no-repeat;
-  background-size: 100%;
-  z-index: -2;
-}
+
 
 .shadow {
   position: absolute;
@@ -86,7 +72,7 @@
   transform: translateY(-10px);
   transition: transform 0.3s ease;
 }
- 
+
 
 .logoFloating {
   animation: floating 2.3s ease infinite;
@@ -143,11 +129,11 @@
   align-items: center;
 }
 
- 
 
- 
 
- 
+
+
+
 
 .enterButtonContainer {
   text-align: center;
@@ -191,18 +177,23 @@
 .sparkle:nth-child(1) {
   animation-delay: 0s;
 }
+
 .sparkle:nth-child(2) {
   animation-delay: 0.2s;
 }
+
 .sparkle:nth-child(3) {
   animation-delay: 0.4s;
 }
+
 .sparkle:nth-child(4) {
   animation-delay: 0.6s;
 }
+
 .sparkle:nth-child(5) {
   animation-delay: 0.8s;
 }
+
 .sparkle:nth-child(6) {
   animation-delay: 1s;
 }
@@ -215,7 +206,8 @@
   animation-delay: 1.35s;
 }
 
-.sparkle::before, .sparkle::after {
+.sparkle::before,
+.sparkle::after {
   content: '';
   position: absolute;
   background: inherit;
@@ -234,48 +226,48 @@
   border-radius: 0.1em;
 }
 
-.enterButton:hover ~ .sparkle {
+.enterButton:hover~.sparkle {
   opacity: 1;
 }
 
-.enterButton:hover ~ .sparkle:nth-child(1) {
+.enterButton:hover~.sparkle:nth-child(1) {
   top: -0%;
   left: 10%;
 }
 
-.enterButton:hover ~ .sparkle:nth-child(2) {
+.enterButton:hover~.sparkle:nth-child(2) {
   top: -30%;
   left: 70%;
 }
 
-.enterButton:hover ~ .sparkle:nth-child(3) {
+.enterButton:hover~.sparkle:nth-child(3) {
   top: 50%;
   left: -30%;
 }
 
-.enterButton:hover ~ .sparkle:nth-child(4) {
+.enterButton:hover~.sparkle:nth-child(4) {
   top: 50%;
   left: 130%;
 }
 
-.enterButton:hover ~ .sparkle:nth-child(5) {
+.enterButton:hover~.sparkle:nth-child(5) {
   top: 130%;
   left: 25%;
 }
 
-.enterButton:hover ~ .sparkle:nth-child(6) {
+.enterButton:hover~.sparkle:nth-child(6) {
   top: 130%;
   left: 85%;
 }
 
 
-.enterButton:hover ~ .sparkle:nth-child(7) {
+.enterButton:hover~.sparkle:nth-child(7) {
   top: 130%;
   left: 85%;
 }
 
 
-.enterButton:hover ~ .sparkle:nth-child(8) {
+.enterButton:hover~.sparkle:nth-child(8) {
   top: 100%;
   left: 35%;
 }
@@ -284,11 +276,53 @@
   0% {
     opacity: 0;
   }
+
   50% {
     opacity: 1;
   }
- 
+
   100% {
     opacity: 0;
-    }
-    }
+  }
+}
+
+.speakerIconContainer {
+  position: fixed;
+  top: 1%;
+  right: 0.7%;
+  z-index: 200;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background-color: #c81f47;
+  border-radius: 50%;
+  border: 2px solid #f9c603;
+}
+
+
+.speakerIcon {
+  font-size: 100%;
+  cursor: pointer;
+
+  color: #f9c603;
+}
+
+
+
+.volumeslider {
+  position: fixed;
+  top: 50%;
+  left: -50%;
+  z-index: 200;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}

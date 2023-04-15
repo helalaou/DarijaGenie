@@ -7,7 +7,7 @@ const ExplanationPage = ({ onNext, onPrevious, language }) => {
   const buttonTexts = getButtonTexts(language);
 
   return (
-    <div className={styles.container}>
+    <div className={styles.backgroundHeader}>
       <div className="title"> 
        </div>
        
