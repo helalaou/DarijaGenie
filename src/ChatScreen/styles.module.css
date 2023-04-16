@@ -25,10 +25,30 @@
   z-index: -2;
 } */
  
-/* styling for the chatbox */
+ 
+ 
+
+/* styles.module.css */
+
+* {
+  transition: all 0.25s ease;
+}
+
+.buttonContainerChatScreen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  left: -28.5%;
+  right: 0%;
+  bottom: 3%;
+  padding: 0 16px;
+}
+
 .container {
   position: relative;
   height: 100vh;
+  
 }
 
 .chatBox {
@@ -38,11 +58,21 @@
   height: 500px;
   right: 5%;
   top: -85%;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  overflow: hidden;
+  
 }
 
 .iframeContainer {
   min-width: 880px;
   width: 100%;
   height: 100%;
-  border: 3px solid gold;
+  border: none;
+  
+}
+
+.iframeContent {
+  font-size: 5px;
 }
