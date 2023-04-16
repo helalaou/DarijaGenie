@@ -78,7 +78,6 @@
 }
 
 
-
 .titlear {
   color: #c92933;
   font-size: 5rem;
@@ -88,7 +87,8 @@
   top: 43%;
   left: 53%;
   transform: translate(-50%, -50%);
-}
+  text-shadow: 1px 1px 3px rgba(255, 215, 0, 0.5), 2px 2px 6px rgba(255, 215, 0, 0.5);
+  }
 
 .subtitlear {
   color: #8f1e15;
@@ -111,6 +111,7 @@
   top: 48%;
   left: 52.2%;  
   transform: translate(-50%, -50%);
+  text-shadow: 1px 1px 3px rgba(255, 215, 0, 0.5), 2px 2px 6px rgba(255, 215, 0, 0.5);
 }
 
 
@@ -137,6 +138,7 @@
     top: 48%;
     left: 52.2%;  
     transform: translate(-50%, -50%);
+    text-shadow: 1px 1px 3px rgba(255, 215, 0, 0.5), 2px 2px 6px rgba(255, 215, 0, 0.5);
 }
 
 .subtitleeng {
@@ -163,6 +165,7 @@
   left: 52%; 
   line-height: 90%; 
   transform: translate(-50%, -50%);
+  text-shadow: 1px 1px 3px rgba(255, 215, 0, 0.5), 2px 2px 6px rgba(255, 215, 0, 0.5);
 }
 
 .subtitledarija {

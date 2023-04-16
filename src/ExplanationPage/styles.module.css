@@ -25,7 +25,7 @@
 }
 
 .text {
-  color: #6e1a29;
+  color: #254b16;
   font-size: 1.6rem;
   font-weight: bold;
   font-family: 'El Messiri', sans-serif;
@@ -40,9 +40,9 @@
 
 @keyframes glow {
   from {
-    text-shadow: 0 0 10px #f4b640, 0 0 20px #f4b640, 0 0 30px #6e1a29, 0 0 40px #f4b640, 0 0 50px #6e1a29, 0 0 60px #eeac32, 0 0 70px #d80d4e;
+    text-shadow: 0 0 10px #f4b640, 0 0 20px #f4b640, 0 0 30px #f4b640, 0 0 40px #f4b640, 0 0 50px #f4b640, 0 0 60px #eeac32, 0 0 70px #f4b640,;
   }
   to {
-    text-shadow: 0 0 10px #eeac32, 0 0 20px #eeac32, 0 0 30px #6e1a29, 0 0 40px #eeac32, 0 0 50px #6e1a29, 0 0 60px #6e1a29, 0 0 70px #eeac32;
+    text-shadow: 0 0 10px #eeac32, 0 0 20px #eeac32, 0 0 30px #f4b640,0 0 40px #eeac32, 0 0 50px #f4b640, 0 0 60px #f4b640, 0 0 70px #f4b640,;
   }
 }

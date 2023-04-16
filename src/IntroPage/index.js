@@ -30,7 +30,7 @@ const IntroPage = ({ onNext, language }) => {
 
   const getSubtitle = () => {
     if (language === "Darija_ar") {
-      return "واجد تتعلم الدارجة بطريقة سهلة وممتعة؟  يلاه نبداو";
+      return "واجد تتعلم الدارجة بطريقة ساهلة وممتعة؟  يلاه نبداو";
 
     } else if (language === "Darija_roman") {
       return "Wajed tet3alem Darija b tari9a sahla w momte3a? Yallah nbadaw!";
