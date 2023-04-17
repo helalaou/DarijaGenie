@@ -1,11 +1,18 @@
-import React from "react";
+ 
+import React, { useEffect } from "react";
 import styles from "./styles.module.css";
 import { getButtonTexts } from "../LanguageSelector";
+import appearingSound from "../appearingSound.wav";  
 
 
 const ExplanationPage = ({ onNext, onPrevious, language }) => {
   const buttonTexts = getButtonTexts(language);
 
+
+  useEffect(() => {
+    const audio = new Audio(appearingSound);
+    audio.play();
+  }, []);
 
 
   const getText = () => {

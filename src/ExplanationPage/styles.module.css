@@ -48,18 +48,32 @@
 }
 
 
+/* Papyrus & its text */
 
+@keyframes papyrus-appear {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+ 
 
 .papyruscontainer {
   background-image: url('./papyrus.png');
-  background-size: 100% 100%;  
+  background-size: 100% 100%;
   background-position: center;
   background-repeat: no-repeat;
-  padding: 292px 355px; 
+  padding: 292px 355px;
   display: inline-block;
   position: absolute;
   top: 7%;
-  right: 15.5%;   
+  right: 15.5%;
+  animation: papyrus-appear 1s ease-out forwards;
 }
 
 .text {
@@ -67,10 +81,10 @@
   font-size: 1.4rem;
   font-weight: bold;
   font-family: 'El Messiri', sans-serif;
-  line-height: 100%;
+  line-height: 105%;
   white-space: normal;
   text-align: center;
-  animation: glow 1.2s ease-in-out infinite alternate;
+  animation: text-appear 1s ease-out 1s forwards, glow 1.2s ease-in-out infinite alternate 2s;
   position: absolute;
   top: 47.4%;
   left: 50%;

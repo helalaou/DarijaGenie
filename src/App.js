@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
-import "./App.css"; 
+import "./App.css";
 import "font-awesome/css/font-awesome.min.css";
 import IntroPage from "./IntroPage";
 import ExplanationPage from "./ExplanationPage";
@@ -8,20 +8,21 @@ import LanguageSelector from "./LanguageSelector";
 
 import clickSound from "./clickSound.wav";
 import magicSound from "./magicSound.mp3";
-import soundtrack from "./soundtrack.mp3";  
- 
- 
+import soundtrack from "./soundtrack.mp3";
+
+
 const App = () => {
 
   const [showOverlay, setShowOverlay] = useState(true);
   const [startAnimation, setStartAnimation] = useState(false);
+  const [logoAppeared, setLogoAppeared] = useState(false);
   const [language, setLanguage] = useState("Darija_ar");
-  const [soundOn, setSoundOn] = useState(false);  
+  const [soundOn, setSoundOn] = useState(false);
   const [currentPage, setCurrentPage] = useState(0);
   const [rotatingText, setRotatingText] = useState("Grant my language wishes");
   const logoRef = useRef(null);
-  const audioRef = useRef(null);  
-  const [volume, setVolume] = useState(0.5);  
+  const audioRef = useRef(null);
+  const [volume, setVolume] = useState(0.5);
   const [showControls, setShowControls] = useState(false);
 
 
@@ -37,7 +38,18 @@ const App = () => {
     }
   }, [startAnimation]);
 
- 
+  useEffect(() => {
+    if (logoRef.current && !logoAppeared) {
+      logoRef.current.addEventListener("animationend", (e) => {
+        if (e.animationName === "genieAppearing") {
+          logoRef.current.classList.remove("logoAppearing");
+          logoRef.current.classList.add("logoFloating");
+          setLogoAppeared(true);
+        }
+      });
+    }
+  }, [startAnimation, logoAppeared]);
+
   useEffect(() => {
     const texts = [
       "Grant my language wishes",
@@ -45,18 +57,18 @@ const App = () => {
       "لبي ليا امنياتي اللغوية",
       "Lebbi lia omniati alughawia",
     ];
-  
+
     let currentIndex = 0;
-  
+
     const textInterval = setInterval(() => {
       currentIndex = (currentIndex + 1) % texts.length;
       setRotatingText(texts[currentIndex]);
     }, 2300);
-  
+
     return () => clearInterval(textInterval);
   }, []);
 
-  
+
   const handleSoundToggle = () => {
     setSoundOn(!soundOn);
     if (audioRef.current) {
@@ -84,20 +96,20 @@ const App = () => {
     magicAudio.play();
     setShowOverlay(false);
     setStartAnimation(true);
-    setShowControls(true);  
+    setShowControls(true);
   };
 
 
   const handleNext = () => {
     setCurrentPage(currentPage + 1);
-    const audio = new Audio(clickSound);  
-    audio.play();  
+    const audio = new Audio(clickSound);
+    audio.play();
   };
 
   const handlePrevious = () => {
     setCurrentPage(currentPage - 1);
-    const audio = new Audio(clickSound);  
-    audio.play();  
+    const audio = new Audio(clickSound);
+    audio.play();
   };
 
   const handleLanguageChange = (newLanguage) => {
@@ -108,7 +120,7 @@ const App = () => {
   return (
     <div className="App">
       <audio ref={audioRef} src={soundtrack} loop />
-      {showControls && (  
+      {showControls && (
         <div className="speakerIconContainer" onClick={handleSoundToggle}>
           <i className={`speakerIcon fa ${soundOn ? "fa-volume-up" : "fa-volume-off"}`}></i>
 
@@ -126,35 +138,37 @@ const App = () => {
 
       {showOverlay && (
         <div className="overlay">
-  <div className="enterButtonContainer">
-    <button className="enterButton" onClick={handleEnter}>
-      {rotatingText}
-    </button>
-    <div className="sparkle"></div>
-    <div className="sparkle"></div>
-    <div className="sparkle"></div>
-    <div className="sparkle"></div>
-    <div className="sparkle"></div>
-    <div className="sparkle"></div>
-  </div>
- 
+          <div className="enterButtonContainer">
+            <button className="enterButton" onClick={handleEnter}>
+              {rotatingText}
+            </button>
+            <div className="sparkle"></div>
+            <div className="sparkle"></div>
+            <div className="sparkle"></div>
+            <div className="sparkle"></div>
+            <div className="sparkle"></div>
+            <div className="sparkle"></div>
+          </div>
+
 
 
         </div>
       )}
 
-{startAnimation && (
-      <div>
-        <div className={`container backgroundHeader`}>
-          <img
-            ref={logoRef}
-            className={`logo ${currentPage === 0 ? "logoAppearing" : ""} ${currentPage === 2 ? "logoLeft logoFloating" : "logoFloating"}`}
-            src="Logo.png"
-            alt="DarijaGenie Logo"
-          />
-          <img className={`teapot ${currentPage === 2 ? "teapotLeft" : ""}`} src="teapot.png" alt="Teapot" />
-          <img className={`shadow ${currentPage === 2 ? "shadowLeft" : ""}`} src="shadow.png" alt="Shadow" />
-        </div>
+      {startAnimation && (
+        <div>
+          <div className={`container backgroundHeader`}>
+            <img
+              ref={logoRef}
+              className={`logo ${currentPage === 0 && !logoAppeared ? "logoAppearing" : "" // Check if the logo has appeared before
+                } ${currentPage === 2 ? "logoLeft logoFloating" : "logoFloating"}`}
+              src="Logo.png"
+              alt="DarijaGenie Logo"
+            />
+
+            <img className={`teapot ${currentPage === 2 ? "teapotLeft" : ""}`} src="teapot.png" alt="Teapot" />
+            <img className={`shadow ${currentPage === 2 ? "shadowLeft" : ""}`} src="shadow.png" alt="Shadow" />
+          </div>
 
 
           <LanguageSelector onLanguageChange={handleLanguageChange} />
@@ -174,11 +188,11 @@ const App = () => {
           {currentPage === 2 && (
             <ChatScreen onPrevious={handlePrevious} language={language} />
           )}
-       
-       </div>
-  )}
-</div>
-);
+
+        </div>
+      )}
+    </div>
+  );
 };
 
 export default App;
