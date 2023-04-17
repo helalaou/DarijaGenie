@@ -1,13 +1,11 @@
-
 import React, { useEffect } from "react";
 import styles from "./styles.module.css";
 import { getButtonTexts } from "../LanguageSelector";
 import appearingSound from "../appearingSound.wav";
-
+import tabledata from "./tabledata.json";
 
 const ExplanationPage = ({ onNext, onPrevious, language }) => {
   const buttonTexts = getButtonTexts(language);
-
 
   useEffect(() => {
     const audio = new Audio(appearingSound);
@@ -26,161 +24,37 @@ const ExplanationPage = ({ onNext, onPrevious, language }) => {
       return "Bienvenue, cher aventurier! Je suis ravi de vous guider durant cette aventure mystique d'apprentissage du Darija via une manière ludique et interactive! N'oubliez pas, vous avez la liberté d’entreprendre en Darija en utilisant le script arabe ou latin (L’alphabet), selon votre préférence. <br><br> Ensemble, nous embarquerons dans un voyage à travers l'apprentissage linguistique qui s'achèvera en tâches, en vous immergeant dans des scénarios captivants où vous assumerez de divers rôles, tandis que j'endosse magiquement de nombreux personnages. Cette méthode envoûtante vous aidera à développer les compétences linguistiques essentielles de manière dynamique et agréable. <br><br> Ci-dessous, vous trouverez les scénarios, les rôles et les compétences que nous développerons ensemble grâce à nos dialogues magiques.";
     }
   };
-
-  const getTable = () => {
-    const tableData = {
-      "English": [
-        {
-          scene: "Buying clothes",
-          bot_char: "Shopkeeper",
-          user_char: "Customer",
-          background: "Clothing shop",
-          skills: "Shopping vocabulary, bargaining"
-        },
-        {
-          scene: "Exchanging currency",
-          bot_char: "Bank teller",
-          user_char: "Client",
-          background: "Bank",
-          skills: "Currency exchange, numbers"
-        },
-        {
-          scene: "Checking-in",
-          bot_char: "Receptionist",
-          user_char: "Guest",
-          background: "Hotel",
-          skills: "Introductions, booking details"
-        },
-        {
-          scene: "Shopping",
-          bot_char: "Store owner",
-          user_char: "Shopper",
-          background: "Supermarket",
-          skills: "Grocery vocabulary, asking for help"
-        }
-      ],
-       "French": [ 
-        {
-          scene: "Acheter des vêtements",
-          bot_char: "Boutiquier",
-          user_char: "Client",
-          background: "Magasin de vêtements",
-          skills: "Vocabulaire de magasinage, négociation"
-        },
-        {
-          scene: "Échanger des devises",
-          bot_char: "Caissier",
-          user_char: "Client",
-          background: "Banque",
-          skills: "Échange de devises, nombres"
-        },
-        {
-          scene: "Check-in",
-          bot_char: "Réceptionniste",
-          user_char: "Invité",
-          background: "Hôtel",
-          skills: "Présentations, détails de réservation"
-        },
-        {
-          scene: "Faire du shopping",
-          bot_char: "Propriétaire de magasin",
-          user_char: "Acheteur",
-          background: "Supermarché",
-          skills: "Vocabulaire de l'épicerie, demander de l'aide"
-        }
-      ],
-      "Darija_ar": [
-        {
-          scene: "تشتري ملابس",
-          bot_char: "بائع",
-          user_char: "زبون",
-          background: "محل ملابس",
-          skills: "مفردات التسوق، التفاوض"
-        },
-        {
-          scene: "تبادل العملات",
-          bot_char: "موظف بنك",
-          user_char: "عميل",
-          background: "البنك",
-          skills: "تبادل العملات، الأرقام"
-        },
-        {
-          scene: "التسجيل",
-          bot_char: "موظف استقبال",
-          user_char: "ضيف",
-          background: "فندق",
-          skills: "التقديم، تفاصيل الحجز"
-        },
-        {
-          scene: "التسوق",
-          bot_char: "صاحب محل",
-          user_char: "متسوق",
-          background: "السوبر ماركت",
-          skills: "مفردات البقالة، طلب المساعدة"
-        }
-      ],
-      "Darija_roman": [
-        {
-          scene: "تشتري ملابس",
-          bot_char: "بائع",
-          user_char: "زبون",
-          background: "محل ملابس",
-          skills: "مفردات التسوق، التفاوض"
-        },
-        {
-          scene: "تبادل العملات",
-          bot_char: "موظف بنك",
-          user_char: "عميل",
-          background: "البنك",
-          skills: "تبادل العملات، الأرقام"
-        },
-        {
-          scene: "التسجيل",
-          bot_char: "موظف استقبال",
-          user_char: "ضيف",
-          background: "فندق",
-          skills: "التقديم، تفاصيل الحجز"
-        },
-        {
-          scene: "التسوق",
-          bot_char: "صاحب محل",
-          user_char: "متسوق",
-          background: "السوبر ماركت",
-          skills: "مفردات البقالة، طلب المساعدة"
-        } 
-      ] };   
-
-    return tableData[language];
-  };
-
-
-
-
+   
 
   const text = getText();
-  const tableData = getTable();
 
+  const getTable = () => {
+    return tabledata[language] || { headers: [], data: [] };
+  };
 
+  const { headers, data } = getTable();
 
   return (
     <div className={styles.backgroundHeader}>
-      <div class={styles.papyruscontainer}>
-        <h1 className={`${styles.text} ${language === "Darija_ar" ? styles["text-ar"] : ""}`} dangerouslySetInnerHTML={{ __html: text }}></h1>
+      <div className={styles.papyruscontainer}>
+        <h1
+          className={`${styles.text} ${
+            language === "Darija_ar" ? styles["text-ar"] : ""
+          }`}
+          dangerouslySetInnerHTML={{ __html: text }}
+        ></h1>
       </div>
-
 
       <table className={styles.languageTable}>
         <thead>
           <tr>
-            <th>Scene</th>
-            <th>Bot Character</th>
-            <th>User Character</th>
-            <th>Background</th>
-            <th>Skills to Learn</th>
+            {headers.map((header, index) => (
+              <th key={index}>{header}</th>
+            ))}
           </tr>
         </thead>
         <tbody>
-          {tableData.map((row, index) => (
+          {data.map((row, index) => (
             <tr key={index}>
               <td>{row.scene}</td>
               <td>{row.bot_char}</td>
@@ -192,14 +66,14 @@ const ExplanationPage = ({ onNext, onPrevious, language }) => {
         </tbody>
       </table>
 
-
-
-      <div className={styles.buttonContainerExplanationPage} >
-        <button className="button" onClick={onPrevious}>{buttonTexts.previous}</button>
-        <button className="button" onClick={onNext}>{buttonTexts.next}</button>
-
+      <div className={styles.buttonContainerExplanationPage}>
+        <button className="button" onClick={onPrevious}>
+          {buttonTexts.previous}
+        </button>
+        <button className="button" onClick={onNext}>
+          {buttonTexts.next}
+        </button>
       </div>
-
     </div>
   );
 };

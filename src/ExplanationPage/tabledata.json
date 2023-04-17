@@ -1,0 +1,135 @@
+{
+    "English": {
+      "headers": ["Scene", "Bot Character", "User Character", "Background", "Skills to Learn"],
+      "data": [
+        {
+          "scene": "Buying clothes",
+          "bot_char": "Shopkeeper",
+          "user_char": "Customer",
+          "background": "Clothing shop",
+          "skills": "Shopping vocabulary, bargaining"
+        },
+        {
+          "scene": "Exchanging currency",
+          "bot_char": "Bank teller",
+          "user_char": "Client",
+          "background": "Bank",
+          "skills": "Currency exchange, numbers"
+        },
+        {
+          "scene": "Checking-in",
+          "bot_char": "Receptionist",
+          "user_char": "Guest",
+          "background": "Hotel",
+          "skills": "Introductions, booking details"
+        },
+        {
+          "scene": "Shopping",
+          "bot_char": "Store owner",
+          "user_char": "Shopper",
+          "background": "Supermarket",
+          "skills": "Grocery vocabulary, asking for help"
+        }
+      ]
+    },
+    "French": {
+      "headers": ["Scène", "Personnage du bot", "Personnage de l'utilisateur", "Contexte", "Compétences à apprendre"],
+      "data": [
+        {
+          "scene": "Acheter des vêtements",
+          "bot_char": "Boutiquier",
+          "user_char": "Client",
+          "background": "Magasin de vêtements",
+          "skills": "Vocabulaire de magasinage, négociation"
+        },
+        {
+          "scene": "Échanger des devises",
+          "bot_char": "Caissier",
+          "user_char": "Client",
+          "background": "Banque",
+          "skills": "Échange de devises, nombres"
+        },
+        {
+          "scene": "Check-in",
+          "bot_char": "Réceptionniste",
+          "user_char": "Invité",
+          "background": "Hôtel",
+          "skills": "Présentations, détails de réservation"
+        },
+        {
+          "scene": "Faire du shopping",
+          "bot_char": "Propriétaire de magasin",
+          "user_char": "Acheteur",
+          "background": "Supermarché",
+          "skills": "Vocabulaire de l'épicerie, demander de l'aide"
+        }
+      ]
+    },
+    "Darija_ar": {
+      "headers": ["مشهد", "شخصية البوت", "شخصية المستخدم", "الخلفية", "المهارات المكتسبة"],
+      "data": [
+        {
+          "scene": "تشتري ملابس",
+          "bot_char": "بائع",
+          "user_char": "زبون",
+          "background": "محل ملابس",
+          "skills": "مفردات التسوق، التفاوض"
+        },
+        {
+          "scene": "تبادل العملات",
+          "bot_char": "موظف بنك",
+          "user_char": "عميل",
+          "background": "البنك",
+          "skills": "تبادل العملات، الأرقام"
+        },
+        {
+          "scene": "التسجيل",
+          "bot_char": "موظف استقبال",
+          "user_char": "ضيف",
+          "background": "فندق",
+          "skills": "التقديم، تفاصيل الحجز"
+          },
+          {
+          "scene": "التسوق",
+          "bot_char": "صاحب محل",
+          "user_char": "متسوق",
+          "background": "السوبر ماركت",
+          "skills": "مفردات البقالة، طلب المساعدة"
+          }
+          ]
+          },
+          "Darija_roman": {
+          "headers": ["Mshhed", "Shkhsyt albwt", "Shkhsyt almustkhdm", "Alkhlfyya", "Almaharat almuktasaba"],
+          "data": [
+          {
+          "scene": "تشتري ملابس",
+          "bot_char": "بائع",
+          "user_char": "زبون",
+          "background": "محل ملابس",
+          "skills": "مفردات التسوق، التفاوض"
+          },
+          {
+          "scene": "تبادل العملات",
+          "bot_char": "موظف بنك",
+          "user_char": "عميل",
+          "background": "البنك",
+          "skills": "تبادل العملات، الأرقام"
+          },
+          {
+          "scene": "التسجيل",
+          "bot_char": "موظف استقبال",
+          "user_char": "ضيف",
+          "background": "فندق",
+          "skills": "التقديم، تفاصيل الحجز"
+          },
+          {
+          "scene": "التسوق",
+          "bot_char": "صاحب محل",
+          "user_char": "متسوق",
+          "background": "السوبر ماركت",
+          "skills": "مفردات البقالة، طلب المساعدة"
+          }
+          ]
+          }
+          }
+  
