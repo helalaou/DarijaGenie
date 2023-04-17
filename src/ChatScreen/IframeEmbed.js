@@ -8,4 +8,4 @@ const IframeEmbed = ({ iframe }) => {
   );
 };
 
-export default IframeEmbed;
+export default IframeEmbed; 
