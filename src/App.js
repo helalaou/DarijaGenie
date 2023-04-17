@@ -145,18 +145,20 @@ const App = () => {
         </div>
       )}
 
-      {startAnimation && (
-        <div>
-          <div className={`container backgroundHeader`}>
-            <img
-              ref={logoRef}
-              className={`logo logoAppearing`}
-              src="Logo.png"
-              alt="DarijaGenie Logo"
-            />
-            <img className="teapot" src="teapot.png" alt="Teapot" />
-            <img className="shadow" src="shadow.png" alt="Shadow" />
-          </div>
+
+{startAnimation && (
+      <div>
+        <div className={`container backgroundHeader`}>
+          <img
+            ref={logoRef}
+            className={`logo ${currentPage === 0 ? "logoAppearing" : ""} ${currentPage === 2 ? "logoLeft logoFloating" : "logoFloating"}`}
+            src="Logo.png"
+            alt="DarijaGenie Logo"
+          />
+          <img className={`teapot ${currentPage === 2 ? "teapotLeft" : ""}`} src="teapot.png" alt="Teapot" />
+          <img className={`shadow ${currentPage === 2 ? "shadowLeft" : ""}`} src="shadow.png" alt="Shadow" />
+        </div>
+
 
           <LanguageSelector onLanguageChange={handleLanguageChange} />
 
