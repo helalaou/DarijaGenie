@@ -98,3 +98,26 @@
   direction: rtl;
   unicode-bidi: bidi-override;
 }
+
+
+
+
+
+
+.languageTable {
+  border-collapse: collapse;
+  width: 80%;
+  margin: auto;
+}
+
+.languageTable th,
+.languageTable td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: left;
+}
+
+.languageTable th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}

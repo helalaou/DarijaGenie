@@ -1,8 +1,8 @@
- 
+
 import React, { useEffect } from "react";
 import styles from "./styles.module.css";
 import { getButtonTexts } from "../LanguageSelector";
-import appearingSound from "../appearingSound.wav";  
+import appearingSound from "../appearingSound.wav";
 
 
 const ExplanationPage = ({ onNext, onPrevious, language }) => {
@@ -27,20 +27,173 @@ const ExplanationPage = ({ onNext, onPrevious, language }) => {
     }
   };
 
- 
+  const getTable = () => {
+    const tableData = {
+      "English": [
+        {
+          scene: "Buying clothes",
+          bot_char: "Shopkeeper",
+          user_char: "Customer",
+          background: "Clothing shop",
+          skills: "Shopping vocabulary, bargaining"
+        },
+        {
+          scene: "Exchanging currency",
+          bot_char: "Bank teller",
+          user_char: "Client",
+          background: "Bank",
+          skills: "Currency exchange, numbers"
+        },
+        {
+          scene: "Checking-in",
+          bot_char: "Receptionist",
+          user_char: "Guest",
+          background: "Hotel",
+          skills: "Introductions, booking details"
+        },
+        {
+          scene: "Shopping",
+          bot_char: "Store owner",
+          user_char: "Shopper",
+          background: "Supermarket",
+          skills: "Grocery vocabulary, asking for help"
+        }
+      ],
+       "French": [ 
+        {
+          scene: "Acheter des vêtements",
+          bot_char: "Boutiquier",
+          user_char: "Client",
+          background: "Magasin de vêtements",
+          skills: "Vocabulaire de magasinage, négociation"
+        },
+        {
+          scene: "Échanger des devises",
+          bot_char: "Caissier",
+          user_char: "Client",
+          background: "Banque",
+          skills: "Échange de devises, nombres"
+        },
+        {
+          scene: "Check-in",
+          bot_char: "Réceptionniste",
+          user_char: "Invité",
+          background: "Hôtel",
+          skills: "Présentations, détails de réservation"
+        },
+        {
+          scene: "Faire du shopping",
+          bot_char: "Propriétaire de magasin",
+          user_char: "Acheteur",
+          background: "Supermarché",
+          skills: "Vocabulaire de l'épicerie, demander de l'aide"
+        }
+      ],
+      "Darija_ar": [
+        {
+          scene: "تشتري ملابس",
+          bot_char: "بائع",
+          user_char: "زبون",
+          background: "محل ملابس",
+          skills: "مفردات التسوق، التفاوض"
+        },
+        {
+          scene: "تبادل العملات",
+          bot_char: "موظف بنك",
+          user_char: "عميل",
+          background: "البنك",
+          skills: "تبادل العملات، الأرقام"
+        },
+        {
+          scene: "التسجيل",
+          bot_char: "موظف استقبال",
+          user_char: "ضيف",
+          background: "فندق",
+          skills: "التقديم، تفاصيل الحجز"
+        },
+        {
+          scene: "التسوق",
+          bot_char: "صاحب محل",
+          user_char: "متسوق",
+          background: "السوبر ماركت",
+          skills: "مفردات البقالة، طلب المساعدة"
+        }
+      ],
+      "Darija_roman": [
+        {
+          scene: "تشتري ملابس",
+          bot_char: "بائع",
+          user_char: "زبون",
+          background: "محل ملابس",
+          skills: "مفردات التسوق، التفاوض"
+        },
+        {
+          scene: "تبادل العملات",
+          bot_char: "موظف بنك",
+          user_char: "عميل",
+          background: "البنك",
+          skills: "تبادل العملات، الأرقام"
+        },
+        {
+          scene: "التسجيل",
+          bot_char: "موظف استقبال",
+          user_char: "ضيف",
+          background: "فندق",
+          skills: "التقديم، تفاصيل الحجز"
+        },
+        {
+          scene: "التسوق",
+          bot_char: "صاحب محل",
+          user_char: "متسوق",
+          background: "السوبر ماركت",
+          skills: "مفردات البقالة، طلب المساعدة"
+        } 
+      ] };   
+
+    return tableData[language];
+  };
+
+
+
+
+
   const text = getText();
+  const tableData = getTable();
+
 
 
   return (
-    <div className={styles.backgroundHeader }>
+    <div className={styles.backgroundHeader}>
       <div class={styles.papyruscontainer}>
+        <h1 className={`${styles.text} ${language === "Darija_ar" ? styles["text-ar"] : ""}`} dangerouslySetInnerHTML={{ __html: text }}></h1>
+      </div>
 
-      <h1 className={`${styles.text} ${language === "Darija_ar" ? styles["text-ar"] : ""}`} dangerouslySetInnerHTML={{ __html: text }}></h1>
+
+      <table className={styles.languageTable}>
+        <thead>
+          <tr>
+            <th>Scene</th>
+            <th>Bot Character</th>
+            <th>User Character</th>
+            <th>Background</th>
+            <th>Skills to Learn</th>
+          </tr>
+        </thead>
+        <tbody>
+          {tableData.map((row, index) => (
+            <tr key={index}>
+              <td>{row.scene}</td>
+              <td>{row.bot_char}</td>
+              <td>{row.user_char}</td>
+              <td>{row.background}</td>
+              <td>{row.skills}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
 
 
 
-       </div>
-       
       <div className={styles.buttonContainerExplanationPage} >
         <button className="button" onClick={onPrevious}>{buttonTexts.previous}</button>
         <button className="button" onClick={onNext}>{buttonTexts.next}</button>
