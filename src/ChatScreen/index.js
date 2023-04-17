@@ -1,13 +1,13 @@
 import React, { useMemo } from "react";
 import styles from "./styles.module.css";
-import { getButtonTexts } from "../LanguageSelector"; 
+import { getButtonTexts } from "../LanguageSelector";
 import IframeEmbed from "./IframeEmbed";
 
-const ChatScreen = ({ onPrevious, language }) => { 
+const ChatScreen = ({ onPrevious, language }) => {
   const buttonTexts = getButtonTexts(language);
   const MSBFM_key = process.env.REACT_APP_MSBFM_KEY;
   const iframe = `<iframe class="${styles.iframeContainer}" src='https://webchat.botframework.com/embed/darijagenie?s=${MSBFM_key}'></iframe>`;
-  const getStripTxt= () => {
+  const getStripTxt = () => {
     if (language === "Darija_ar") {
       return "خود حكمة الجني لتطبيقاتك المفضلة";
     } else if (language === "Darija_roman") {
@@ -20,7 +20,7 @@ const ChatScreen = ({ onPrevious, language }) => {
 
     }
   };
-  const stripTxt= getStripTxt();
+  const stripTxt = getStripTxt();
 
 
   return (
@@ -29,6 +29,29 @@ const ChatScreen = ({ onPrevious, language }) => {
         <IframeEmbed iframe={iframe} />
       </div>
       <div className={styles.goldenStrip}>{stripTxt}</div>
+ 
+
+      <div className={styles.imagescontainer}>
+  <figure>
+    <img src="https://i.imgur.com/uX6zhrd.jpg" alt="Telegram QR code" />
+    <figcaption class="image-text">Telegram</figcaption>
+  </figure>
+  <figure>
+    <img src="https://i.imgur.com/uX6zhrd.jpg" alt="Messenger QR code" />
+    <figcaption class="image-text">Facebook Messenger</figcaption>
+  </figure>
+  <figure>
+    <img src="https://i.imgur.com/uX6zhrd.jpg" alt="Microsoft Teams QR code" />
+    <figcaption class="image-text">Microsoft Teams</figcaption>
+  </figure>
+  <figure>
+    <img src="https://i.imgur.com/uX6zhrd.jpg" alt="Slack QR code" />
+    <figcaption class="image-text">Slack</figcaption>
+  </figure>
+</div>
+
+
+
 
       <div className={styles.buttonContainerChatScreen}>
         <button className="button" onClick={onPrevious}>

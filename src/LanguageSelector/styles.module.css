@@ -10,8 +10,8 @@
   left: 0.7%;
   display: flex;
   align-items: center;
+  z-index: 9999; /* set a high z-index value */
 }
-
 
 .languageSelect {
   appearance: none;
