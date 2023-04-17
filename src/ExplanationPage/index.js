@@ -44,7 +44,8 @@ const ExplanationPage = ({ onNext, onPrevious, language }) => {
           dangerouslySetInnerHTML={{ __html: text }}
         ></h1>
       </div>
-
+      <div class={styles.tableContainer}>
+     <div class={styles.tableWrapper}> 
       <table className={styles.languageTable}>
         <thead>
           <tr>
@@ -64,8 +65,8 @@ const ExplanationPage = ({ onNext, onPrevious, language }) => {
             </tr>
           ))}
         </tbody>
-      </table>
-
+      </table></div>
+      </div>
       <div className={styles.buttonContainerExplanationPage}>
         <button className="button" onClick={onPrevious}>
           {buttonTexts.previous}
