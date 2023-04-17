@@ -24,31 +24,34 @@ const ChatScreen = ({ onPrevious, language }) => {
 
 
   return (
+
+
+    <div className={styles.backgroundHeader}>
+     
     <div className={styles.container}>
       <div className={styles.chatBox}>
         <IframeEmbed iframe={iframe} />
       </div>
       <div className={styles.goldenStrip}>{stripTxt}</div>
- 
-
       <div className={styles.imagescontainer}>
-  <figure>
-    <img src="https://i.imgur.com/uX6zhrd.jpg" alt="Telegram QR code" />
-    <figcaption class="image-text">Telegram</figcaption>
-  </figure>
-  <figure>
-    <img src="https://i.imgur.com/uX6zhrd.jpg" alt="Messenger QR code" />
-    <figcaption class="image-text">Facebook Messenger</figcaption>
-  </figure>
-  <figure>
-    <img src="https://i.imgur.com/uX6zhrd.jpg" alt="Microsoft Teams QR code" />
-    <figcaption class="image-text">Microsoft Teams</figcaption>
-  </figure>
-  <figure>
-    <img src="https://i.imgur.com/uX6zhrd.jpg" alt="Slack QR code" />
-    <figcaption class="image-text">Slack</figcaption>
-  </figure>
-</div>
+        <figure>
+          <img src="https://i.imgur.com/uX6zhrd.jpg" alt="Telegram QR code" />
+          <figcaption class="image-text">Telegram</figcaption>
+        </figure>
+        <figure>
+          <img src="https://i.imgur.com/uX6zhrd.jpg" alt="Messenger QR code" />
+          <figcaption class="image-text">Facebook Messenger</figcaption>
+        </figure>
+        <figure>
+          <img src="https://i.imgur.com/uX6zhrd.jpg" alt="Microsoft Teams QR code" />
+          <figcaption class="image-text">Microsoft Teams</figcaption>
+        </figure>
+        <figure>
+          <img src="https://i.imgur.com/uX6zhrd.jpg" alt="Slack QR code" />
+          <figcaption class="image-text">Slack</figcaption>
+        </figure>
+      </div>
+      </div>
 
 
 
