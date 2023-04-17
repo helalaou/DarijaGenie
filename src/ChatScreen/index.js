@@ -5,7 +5,7 @@ import IframeEmbed from "./IframeEmbed";
 
 const ChatScreen = ({ onPrevious, language }) => {
   const buttonTexts = getButtonTexts(language);
-  const iframe = `<iframe class="${styles.iframeContainer}" src='https://webchat.botframework.com/embed/darijagenie?s=C8G9pPl3IoU.f9xGFfaTn0cgUexUnqd7mNSaTWhjNPy40v96DJqXz6I'></iframe>`;
+  const iframe = `<iframe class="${styles.iframeContainer}" src='https://webchat.botframework.com/embed/darijagenie?s=C8G9pPl3IoU.CzUIPkAcuA-RDndfDqFhJTqqnBZ01L9V1dG4tox4ndM'></iframe>`;
 
   return (
     <div className={styles.container}>
