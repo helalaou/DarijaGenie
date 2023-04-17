@@ -51,7 +51,7 @@
 
 
 .papyruscontainer {
-  background-image: url('./paperX.png');
+  background-image: url('./papyrus.png');
   background-size: 100% 100%;  
   background-position: center;
   background-repeat: no-repeat;
@@ -63,7 +63,7 @@
 }
 
 .text {
-  color: #5a3c28;  
+  color: #5a3c28;
   font-size: 1.4rem;
   font-weight: bold;
   font-family: 'El Messiri', sans-serif;
@@ -73,9 +73,14 @@
   animation: glow 1.2s ease-in-out infinite alternate;
   position: absolute;
   top: 47.4%;
-  left: 50%; 
+  left: 50%;
   transform: translate(-50%, -50%);
   width: 70%;
   max-width: 70%;
-  text-shadow: 0.5px 0.5px 1px rgba(0, 0, 0, 0.2);  
+  text-shadow: 0.5px 0.5px 1px rgba(0, 0, 0, 0.2);
+}
+
+.text.text-ar {
+  direction: rtl;
+  unicode-bidi: bidi-override;
 }

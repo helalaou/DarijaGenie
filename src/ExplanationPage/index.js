@@ -10,7 +10,7 @@ const ExplanationPage = ({ onNext, onPrevious, language }) => {
 
   const getText = () => {
     if (language === "Darija_ar") {
-      return "TBD";
+      return "السلام عزيزي المغامر <br><br> أنا بصيفتي جني الدارجة, عندي طريقة واعرة باش نعلمك تهضرها بحالي. <br><br> الطريقة هي أننا غادي نلعبو مجموعة ديال السيناريوات لي أنا غادي ناخد فيهم دور ديال بزاف ديال الشخصيات ونتا/(نتي) غادي تلعب الدور ديال شخصيات اخرين (بحال شي مسرحية ولا قصة). <br><br> مثلا, فالسيناريو ديال 'شريان لحوايج' أنا غادي نلعب الدور ديال مول المحل ونتا غادي تلعب الدور ديال لكليان لي جاي للمحل. <br><br> شوف لتحت غادي تلقا واحد الطابلو فيه كاع السيناريوات لي نقدرو نلعبو. هاد الطابلو فيه الأدوار ليي أنا وياك نقدو نلعبوها, الخلفية (أو القصة) ديال السيناريو, والحوايج لي غادي تتعلم فيهم. <br><br> وجد راسك معايا ويلاه نبداو راني تحمست!";
     } else if (language === "Darija_roman") {
       return "Salam, 3azizi l moughamir<br><br> Ana B’ Sifti Jinni Darija 3ndi tari9a wa3ra bach n3elmek thdrha b7ali.<br><br> Tari9a hia annana ghadi nl3bo majmou3a dial scenariohat li ana ghadi nakhed fihom dawr dial bzaf d cha5siyyat wnta/(nti) ghadi tl3ab dawr dial cha5ssiyyat akhrin.<br><br> Matalan, f scenario dial 'Chrian le7wayej' ana ghadi nl3eb dawr dial mol lma7al wnta ghadi tl3ab dawr dial l klian li jay l'lma7al.<br><br> Chouf lte7t ghadi tl9a wa7d tableau fih ga3 scenarioat li n9edo nle3bo. Had tableau fih l2adwar li ana wiak n9edo nle3bouha, lkhalfia (wlla l9issa) dial scenario, w le7wayj lli ghadi tet3alem fihoum.<br><br> Wjjed Rask m3aya w Yallah nbdaw rani t7ammast :)";
     } else if (language === "English") {
@@ -28,7 +28,8 @@ const ExplanationPage = ({ onNext, onPrevious, language }) => {
     <div className={styles.backgroundHeader }>
       <div class={styles.papyruscontainer}>
 
-      <h1 className={styles.text} dangerouslySetInnerHTML={{ __html: text }}></h1>
+      <h1 className={`${styles.text} ${language === "Darija_ar" ? styles["text-ar"] : ""}`} dangerouslySetInnerHTML={{ __html: text }}></h1>
+
 
 
        </div>

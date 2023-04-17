@@ -98,6 +98,9 @@
   left: 53%;
   font-family: 'El Messiri', sans-serif;
   transform: translate(-50%, -50%);
+    direction: rtl;
+    unicode-bidi: bidi-override;
+   
 }
 
 
