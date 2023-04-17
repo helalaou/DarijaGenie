@@ -26,52 +26,31 @@
 } */
  
  
-/* styles.module.css */
-
-* {
-  transition: all 0.25s ease;
-}
-
-.buttonContainerChatScreen {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: fixed;
-  left: -28.5%;
-  right: 0%;
-  bottom: 3%;
-  padding: 0 16px;
-}
-
-.container {
-  position: relative;
-  height: 100vh;
-  
-}
- 
-
- 
 
  /* styling for the chatbox */
 
  * {
   transition: all 0.25s ease;
 }
+/* Import a modern font (if desired) */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
 .container {
   position: relative;
   height: 100vh;
 }
 
 .chatBox {
-  position: absolute; 
+  position: absolute;
   display: flex;
   justify-content: flex-end;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   height: 500px;
   right: 5%;
   top: -85%;
-  border-radius: 15px; 
- 
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: #f8f8f8; /* Light background for a modern look */
+  overflow: hidden; /* Hide any overflowing content */
 }
 
 .iframeContainer {
@@ -79,7 +58,15 @@
   width: 100%;
   height: 100%;
   border: none;
+  border-radius: 12px; /* Slightly smaller rounded corners for inner container */
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle inner shadow for depth */
 }
+
+/* Apply the modern font to the chatBox (if desired) */
+.chatBox * {
+  font-family: 'Roboto', sans-serif;
+}
+
 
 /* elements for page 3 positioning */
 
@@ -108,13 +95,7 @@
   max-height: 100%;
   margin-top: 5%;
 }
-.logo3rdpage {
-  max-width: 40%;
-  object-fit: contain;
-  margin-left: -64%;
-  max-height: 100%;
-  margin-top: 5%;
-}
+ 
 
 .logo:hover {
   transform: translateY(-10px);
