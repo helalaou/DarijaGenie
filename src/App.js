@@ -10,8 +10,6 @@ import clickSound from "./clickSound.wav";
 import magicSound from "./magicSound.mp3";
 import soundtrack from "./soundtrack.mp3";  
  
-
-
  
 const App = () => {
 
@@ -144,7 +142,6 @@ const App = () => {
 
         </div>
       )}
-
 
 {startAnimation && (
       <div>

@@ -1,19 +1,17 @@
 import React, { useMemo } from "react";
 import styles from "./styles.module.css";
-import { getButtonTexts } from "../LanguageSelector";
-import ReactWebChat, { createDirectLine } from 'botframework-webchat';
+import { getButtonTexts } from "../LanguageSelector"; 
+import IframeEmbed from "./IframeEmbed";
 
-const ChatScreen = ({ onPrevious, language }) => {
-  const token =  "C8G9pPl3IoU.C3yGRwn1XbYWny1z7CrIck3rvkGrywCD5yt7k0wraXw";
+const ChatScreen = ({ onPrevious, language }) => { 
   const buttonTexts = getButtonTexts(language);
-  const directLine = useMemo(() => createDirectLine({ token }), []);
+  const MSBFM_key = process.env.REACT_APP_MSBFM_KEY;
+  const iframe = `<iframe class="${styles.iframeContainer}" src='https://webchat.botframework.com/embed/darijagenie?s=${MSBFM_key}'></iframe>`;
 
   return (
-    
     <div className={styles.container}>
-
       <div className={styles.chatBox}>
-        <ReactWebChat className={styles.iframeContainer} directLine={directLine} />
+        <IframeEmbed iframe={iframe} />
       </div>
       <div className={styles.buttonContainerChatScreen}>
         <button className="button" onClick={onPrevious}>
