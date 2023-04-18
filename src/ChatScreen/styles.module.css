@@ -183,6 +183,7 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   border-top: 2px solid #c81f47;
   border-bottom: 2px solid #c81f47;
+  z-index: 1;
 }
 
 .goldenStrip:before,
