@@ -3,10 +3,11 @@
   justify-content: center;
   align-items: center;
   position: fixed;
-  left: -43%;
+  left: -40%;
   right: 0%;
   bottom: 3%;
   padding: 0 16px; 
+  z-index: 1;
    
 }
 
@@ -19,6 +20,7 @@
   right: 0%;
   bottom: 3%;
   justify-content: space-between; 
+  z-index: 1;
 }
 
   /* .backgroundHeader::before {
@@ -179,7 +181,6 @@
   color: #093d27;
   font-weight: 700;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  z-index: 10;
   border-top: 2px solid #c81f47;
   border-bottom: 2px solid #c81f47;
 }

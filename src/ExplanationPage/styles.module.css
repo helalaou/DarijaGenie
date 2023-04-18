@@ -7,6 +7,7 @@
   right: 6.5%;
   bottom: 3%;
   justify-content: space-between; 
+  z-index: 2;
 }
 .buttonContainerExplanationPageScroll {
   display: flex;
@@ -17,6 +18,7 @@
   right: 4.25%;
   bottom: 3%;
   justify-content: space-between; 
+  z-index: 2;
 }
 
 .backgroundHeader::before {
