@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import styles from "./styles.module.css";
 import { getButtonTexts } from "../LanguageSelector";
 import appearingSound from "../appearingSound.wav";
@@ -6,12 +6,24 @@ import tabledata from "./tabledata.json";
 
 const ExplanationPage = ({ onNext, onPrevious, language }) => {
   const buttonTexts = getButtonTexts(language);
+  const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
     const audio = new Audio(appearingSound);
     audio.play();
-  }, []);
 
+    const handleScroll = () => {
+      if (window.pageYOffset > 0) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const getText = () => {
     if (language === "Darija_ar") {
@@ -24,7 +36,7 @@ const ExplanationPage = ({ onNext, onPrevious, language }) => {
       return "Bienvenue, cher aventurier! Je suis ravi de vous guider durant cette aventure mystique d'apprentissage du Darija via une manière ludique et interactive! N'oubliez pas, vous avez la liberté d’entreprendre en Darija en utilisant le script arabe ou latin (L’alphabet), selon votre préférence. <br><br> Ensemble, nous embarquerons dans un voyage à travers l'apprentissage linguistique qui s'achèvera en tâches, en vous immergeant dans des scénarios captivants où vous assumerez de divers rôles, tandis que j'endosse magiquement de nombreux personnages. Cette méthode envoûtante vous aidera à développer les compétences linguistiques essentielles de manière dynamique et agréable. <br><br> Ci-dessous, vous trouverez les scénarios, les rôles et les compétences que nous développerons ensemble grâce à nos dialogues magiques.";
     }
   };
-   
+
 
   const text = getText();
 
@@ -32,9 +44,7 @@ const ExplanationPage = ({ onNext, onPrevious, language }) => {
     return tabledata[language] || { headers: [], data: [] };
   };
 
-  const { headers, data } = getTable();
-
-  return (
+  const { headers, data } = getTable(); return (
     <div className={styles.backgroundHeader}>
       <div className={styles.papyruscontainer}>
         <h1
@@ -44,36 +54,45 @@ const ExplanationPage = ({ onNext, onPrevious, language }) => {
           dangerouslySetInnerHTML={{ __html: text }}
         ></h1>
       </div>
-      <div class={styles.tableContainer}>
-     <div class={styles.tableWrapper}> 
-      <table className={styles.languageTable}>
-        <thead>
-          <tr>
-            {headers.map((header, index) => (
-              <th key={index}>{header}</th>
-            ))}
-          </tr>
-        </thead>
-        <tbody>
-          {data.map((row, index) => (
-            <tr key={index}>
-              <td>{row.scene}</td>
-              <td>{row.bot_char}</td>
-              <td>{row.user_char}</td>
-              <td>{row.background}</td>
-              <td>{row.skills}</td>
-            </tr>
-          ))}
-        </tbody>
-      </table></div>
-      </div>
-      <div className={styles.buttonContainerExplanationPage}>
+
+      <div
+        className={
+          scrolled
+            ? styles.buttonContainerExplanationPageScroll
+            : styles.buttonContainerExplanationPage
+        }
+      >
         <button className="button" onClick={onPrevious}>
           {buttonTexts.previous}
         </button>
         <button className="button" onClick={onNext}>
           {buttonTexts.next}
         </button>
+      </div>
+
+      <div class={styles.tableContainer}>
+        <div class={styles.tableWrapper}>
+          <table className={styles.languageTable}>
+            <thead>
+              <tr>
+                {headers.map((header, index) => (
+                  <th key={index}>{header}</th>
+                ))}
+              </tr>
+            </thead>
+            <tbody>
+              {data.map((row, index) => (
+                <tr key={index}>
+                  <td>{row.scene}</td>
+                  <td>{row.bot_char}</td>
+                  <td>{row.user_char}</td>
+                  <td>{row.background}</td>
+                  <td>{row.skills}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
       </div>
     </div>
   );

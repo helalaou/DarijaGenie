@@ -47,21 +47,21 @@
           "bot_char": "Caissier",
           "user_char": "Client",
           "background": "Banque",
-          "skills": "Échange de devises, nombres"
+          "skills": "Échange de devises, nombres Vocabulaire de l'épicerie, demander de l'aide"
         },
         {
           "scene": "Check-in",
           "bot_char": "Réceptionniste",
           "user_char": "Invité",
           "background": "Hôtel",
-          "skills": "Présentations, détails de réservation"
+          "skills": "Présentations, détails de réservation Vocabulaire de l'épicerie, demander de l'aide"
         },
         {
           "scene": "Faire du shopping",
           "bot_char": "Propriétaire de magasin",
           "user_char": "Acheteur",
           "background": "Supermarché",
-          "skills": "Vocabulaire de l'épicerie, demander de l'aide"
+          "skills": "Vocabulaire de l'épicerie, demander de l'aide Vocabulaire de l'épicerie, demander de l'aide"
         }
       ]
     },

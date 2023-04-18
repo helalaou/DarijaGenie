@@ -3,11 +3,22 @@
   justify-content: center;
   align-items: center;
   position: fixed;
-  left: -40%;
+  left: -43%;
   right: 0%;
   bottom: 3%;
   padding: 0 16px; 
    
+}
+
+.buttonContainerChatScreenPageScroll {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  left: 3%;
+  right: 0%;
+  bottom: 3%;
+  justify-content: space-between; 
 }
 
   /* .backgroundHeader::before {

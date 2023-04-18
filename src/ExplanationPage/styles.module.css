@@ -3,8 +3,18 @@
   justify-content: center;
   align-items: center;
   position: fixed;
-  left: 28%;
+  left: 29%;
   right: 6.5%;
+  bottom: 3%;
+  justify-content: space-between; 
+}
+.buttonContainerExplanationPageScroll {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  left: 4%;
+  right: 4.5%;
   bottom: 3%;
   justify-content: space-between; 
 }
@@ -71,8 +81,8 @@
   padding: 292px 355px;
   display: inline-block;
   position: absolute;
-  top: 7%;
-  right: 15.5%;
+  top: 10%;
+  right: 14.5%;
   animation: papyrus-appear 1s ease-out forwards;
 }
 
@@ -101,6 +111,7 @@
 
 
  
+
 /* Table styling */ 
  
  
@@ -114,9 +125,11 @@
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  padding-bottom: 30px; 
-  margin-bottom: 28%;
+  padding-bottom: 30px;
+  margin-bottom: 19%;
+  margin-top: 15%;  
 }
+
 
 .languageTable {
   border-collapse: collapse;
@@ -126,25 +139,26 @@
   font-family: 'El Messiri', sans-serif;
   background-color: #fef7e6;
   color: #3d3b3a; 
-  bottom:  -300px;
-  position: absolute;
+  bottom:  -53%;
+  position: absolute; 
   
 }
 
 .languageTable th,
 .languageTable td {
-  border: 1px solid #d7b37a;
+  border: 1px solid #882331;
   padding: 10px;
   text-align: left;
 }
 
 .languageTable th {
-  background-color: #f0dc9c;
+  background-color: #d4ab6f;
   font-weight: bold;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 0px;
+  font-size: 1.3rem;
 }
 
 .languageTable tr:nth-child(even) {
-  background-color: #fdf2d2;
+  background-color: #d9cead;
 }
