@@ -28,7 +28,7 @@
   left: 0;
   width: 100%;
   height: 170%;
-  background-image: url('./Background2.png');
+  background-image: url('./assets/Background2.png');
   filter: opacity(1);
   background-position: center top;
   background-repeat: no-repeat;
@@ -76,7 +76,7 @@
  
 
 .papyruscontainer {
-  background-image: url('./papyrus.png');
+  background-image: url('./assets/papyrus.png');
   background-size: 100% 100%;
   background-position: center;
   background-repeat: no-repeat;

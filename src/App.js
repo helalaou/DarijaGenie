@@ -6,9 +6,9 @@ import ExplanationPage from "./ExplanationPage";
 import ChatScreen from "./ChatScreen";
 import LanguageSelector from "./LanguageSelector";
 
-import clickSound from "./clickSound.wav";
-import magicSound from "./magicSound.mp3";
-import soundtrack from "./soundtrack.mp3";
+import clickSound from "./sounds/clickSound.wav";
+import magicSound from "./sounds/magicSound.mp3";
+import soundtrack from "./sounds/soundtrack.mp3";
 
 
 const App = () => {
@@ -23,7 +23,8 @@ const App = () => {
   const logoRef = useRef(null);
   const audioRef = useRef(null);
   const [volume, setVolume] = useState(0.5);
-  const [showControls, setShowControls] = useState(false);
+  const [showControls, setShowControls] = useState(false); 
+
 
 
 
@@ -96,7 +97,7 @@ const App = () => {
     magicAudio.play();
     setShowOverlay(false);
     setStartAnimation(true);
-    setShowControls(true);
+    setShowControls(true); 
   };
 
 
@@ -190,16 +191,23 @@ const App = () => {
              )}
            </div>
          )}
-     
-         <div className="footer">
-           <p>
-           Built with ❤️ by {" "}
-             <a href="https://hamzaelalaoui.com/" target="_blank" rel="noopener noreferrer">
-               Hamza El Alaoui
-             </a>
-           </p>
-         </div>
-        </div> 
-      ); 
-    }; 
-    export default App; 
+
+
+     {!showOverlay && (
+      <div className="footer">
+        <p>
+          Built with ❤️ by{" "}
+          <a
+            href="https://hamzaelalaoui.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Hamza El Alaoui
+          </a>
+        </p>
+      </div>
+    )}
+  </div> 
+  ); 
+}; 
+export default App; 

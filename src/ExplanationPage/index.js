@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import styles from "./styles.module.css";
 import { getButtonTexts } from "../LanguageSelector";
-import appearingSound from "../appearingSound.wav";
+import appearingSound from "../sounds/appearingSound.wav";
 import tabledata from "./tabledata.json";
 
 const ExplanationPage = ({ onNext, onPrevious, language }) => {
