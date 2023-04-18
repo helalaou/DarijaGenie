@@ -7,6 +7,7 @@ const ChatScreen = ({ onPrevious, language }) => {
   const buttonTexts = getButtonTexts(language);
   const [scrolled, setScrolled] = useState(false);
   const MSBFM_key = process.env.REACT_APP_MSBFM_KEY;
+  const [showPopup, setShowPopup] = useState(false);
   const iframe = `<iframe class="${styles.iframeContainer}" src='https://webchat.botframework.com/embed/darijagenie?s=${MSBFM_key}'></iframe>`;
   const getStripTxt = () => {
     if (language === "Darija_ar") {
@@ -20,6 +21,14 @@ const ChatScreen = ({ onPrevious, language }) => {
 
 
     }
+  };
+
+  const handleMicrosoftTeamsClick = () => {
+    setShowPopup(true);
+  };
+
+  const handleClosePopup = () => {
+    setShowPopup(false);
   };
 
   useEffect(() => {
@@ -52,24 +61,41 @@ const ChatScreen = ({ onPrevious, language }) => {
         </div>
         <div className={styles.goldenStrip}>{stripTxt}</div>
         <div className={styles.imagescontainer}>
+
+           <figure>
+            <img src="https://i.imgur.com/uX6zhrd.jpg" alt="Slack QR code" />
+            <figcaption class="image-text">Slack</figcaption>
+          </figure>
+
           <figure>
             <img src="https://i.imgur.com/uX6zhrd.jpg" alt="Telegram QR code" />
             <figcaption class="image-text">Telegram</figcaption>
           </figure>
+
           <figure>
             <img src="https://i.imgur.com/uX6zhrd.jpg" alt="Messenger QR code" />
             <figcaption class="image-text">Facebook Messenger</figcaption>
           </figure>
-          <figure>
-            <img src="https://i.imgur.com/uX6zhrd.jpg" alt="Microsoft Teams QR code" />
-            <figcaption class="image-text">Microsoft Teams</figcaption>
-          </figure>
-          <figure>
-            <img src="https://i.imgur.com/uX6zhrd.jpg" alt="Slack QR code" />
-            <figcaption class="image-text">Slack</figcaption>
-          </figure>
+
+          <figure onClick={handleMicrosoftTeamsClick}>
+          <img src="https://i.imgur.com/uX6zhrd.jpg" alt="Microsoft Teams QR code" />
+          <figcaption class="image-text">Microsoft Teams</figcaption>
+        </figure>
+          
         </div>
       </div>
+
+      {showPopup && (
+        <div className={styles.popup}>
+          <div className={styles.popupContent}>
+            <h3>Microsoft Teams</h3>
+            <p>Text for Microsoft Teams.</p>
+            <button className={styles.closeButton} onClick={handleClosePopup}>
+              Close
+            </button>
+          </div>
+        </div>
+      )}
  
 
       <div

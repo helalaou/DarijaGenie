@@ -20,7 +20,7 @@ const IntroPage = ({ onNext, language }) => {
     if (language === "Darija_ar") {
       return ".أنا سلطان، جـنـي الدارجة";
     } else if (language === "Darija_roman") {
-      return "Ana Sutlan, jenii Darija.";
+      return "Ana Sultan, jenii Darija.";
     } else if (language === "English") {
       return "I'm Sultan, the Darija Genie.";
     } else if (language === "French") {
