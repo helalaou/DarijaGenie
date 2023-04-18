@@ -117,6 +117,7 @@
   display: grid;
   grid-template-rows: 1fr auto;
   min-height: 100%;
+  
 }
 
 .tableWrapper {
@@ -126,6 +127,7 @@
   padding-bottom: 30px;
   margin-bottom: 19%;
   margin-top: 15%;  
+  z-index: 1;
 }
 
 .languageTable {

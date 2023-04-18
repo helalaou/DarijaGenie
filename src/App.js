@@ -186,13 +186,20 @@ const App = () => {
           )}
 
           {currentPage === 2 && (
-            <ChatScreen onPrevious={handlePrevious} language={language} />
-          )}
-
-        </div>
-      )}
-    </div>
-  );
-};
-
-export default App;
+             <ChatScreen onPrevious={handlePrevious} language={language} />
+             )}
+           </div>
+         )}
+     
+         <div className="footer">
+           <p>
+           Built with ❤️ by {" "}
+             <a href="https://hamzaelalaoui.com/" target="_blank" rel="noopener noreferrer">
+               Hamza El Alaoui
+             </a>
+           </p>
+         </div>
+        </div> 
+      ); 
+    }; 
+    export default App; 
