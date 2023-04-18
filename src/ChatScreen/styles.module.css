@@ -220,15 +220,17 @@
   justify-content: center;
   align-items: center;
   width: 100%;
+  padding-bottom: 7%;
  
 }
 
 .imagescontainer figure {
-  margin: 1.2%;
+  margin: 1.1%;
   display: inline-block;
   text-align: center;
-  margin-top: 11.3%;
+  margin-top: 12.3%;
   font-size: 1.3rem;
+
 }
 
 .imagescontainer img {
@@ -246,3 +248,4 @@
   color: black;
   
 }
+ 

@@ -70,7 +70,7 @@ const ChatScreen = ({ onPrevious, language }) => {
           </figure>
         </div>
       </div>
-
+ 
 
       <div
         className={

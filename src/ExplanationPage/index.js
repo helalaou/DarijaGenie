@@ -92,8 +92,12 @@ const ExplanationPage = ({ onNext, onPrevious, language }) => {
               ))}
             </tbody>
           </table>
+          
         </div>
+        
       </div>
+      
+
     </div>
   );
 };
