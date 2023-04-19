@@ -109,7 +109,7 @@ const ChatScreen = ({ onPrevious, language }) => {
             <p><strong>1.</strong> Open Microsoft Teams and sign in.</p>
             <p><strong>2.</strong> In the search bar at the top of the application, paste the chatbot's unique ID: 54f9a37e-0055-42b3-967d-e3d2ec5c884d</p>
             <p><strong>3.</strong> Press Enter to start the search.</p>
-            <p><strong>4.</strong> Click on the "People" tab, and the Darija chatbot should appear in the search results.</p>
+            <p><strong>4.</strong> Click on the "People" tab, and the Darija Genie should appear in the search results.</p>
             <p><strong>5.</strong> Click on the chatbot to start or continue a conversation with it.</p>
             <button className={styles.closeButton} onClick={handleClosePopup}>
               Close

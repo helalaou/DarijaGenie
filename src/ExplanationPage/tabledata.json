@@ -1,135 +1,158 @@
 {
-    "English": {
-      "headers": ["Scene", "Bot Character", "User Character", "Background", "Skills to Learn"],
-      "data": [
-        {
-          "scene": "Buying clothes",
-          "bot_char": "Shopkeeper",
-          "user_char": "Customer",
-          "background": "Clothing shop",
-          "skills": "Shopping vocabulary, bargaining"
-        },
-        {
-          "scene": "Exchanging currency",
-          "bot_char": "Bank teller",
-          "user_char": "Client",
-          "background": "Bank",
-          "skills": "Currency exchange, numbers"
-        },
-        {
-          "scene": "Checking-in",
-          "bot_char": "Receptionist",
-          "user_char": "Guest",
-          "background": "Hotel",
-          "skills": "Introductions, booking details"
-        },
-        {
-          "scene": "Shopping",
-          "bot_char": "Store owner",
-          "user_char": "Shopper",
-          "background": "Supermarket",
-          "skills": "Grocery vocabulary, asking for help"
-        }
-      ]
-    },
-    "French": {
-      "headers": ["Scène", "Personnage du bot", "Personnage de l'utilisateur", "Contexte", "Compétences à apprendre"],
-      "data": [
-        {
-          "scene": "Acheter des vêtements",
-          "bot_char": "Boutiquier",
-          "user_char": "Client",
-          "background": "Magasin de vêtements",
-          "skills": "Vocabulaire de magasinage, négociation"
-        },
-        {
-          "scene": "Échanger des devises",
-          "bot_char": "Caissier",
-          "user_char": "Client",
-          "background": "Banque",
-          "skills": "Échange de devises, nombres Vocabulaire de l'épicerie, demander de l'aide"
-        },
-        {
-          "scene": "Check-in",
-          "bot_char": "Réceptionniste",
-          "user_char": "Invité",
-          "background": "Hôtel",
-          "skills": "Présentations, détails de réservation Vocabulaire de l'épicerie, demander de l'aide"
-        },
-        {
-          "scene": "Faire du shopping",
-          "bot_char": "Propriétaire de magasin",
-          "user_char": "Acheteur",
-          "background": "Supermarché",
-          "skills": "Vocabulaire de l'épicerie, demander de l'aide Vocabulaire de l'épicerie, demander de l'aide"
-        }
-      ]
-    },
-    "Darija_ar": {
-      "headers": ["مشهد", "شخصية البوت", "شخصية المستخدم", "الخلفية", "المهارات المكتسبة"],
-      "data": [
-        {
-          "scene": "تشتري ملابس",
-          "bot_char": "بائع",
-          "user_char": "زبون",
-          "background": "محل ملابس",
-          "skills": "مفردات التسوق، التفاوض"
-        },
-        {
-          "scene": "تبادل العملات",
-          "bot_char": "موظف بنك",
-          "user_char": "عميل",
-          "background": "البنك",
-          "skills": "تبادل العملات، الأرقام"
-        },
-        {
-          "scene": "التسجيل",
-          "bot_char": "موظف استقبال",
-          "user_char": "ضيف",
-          "background": "فندق",
-          "skills": "التقديم، تفاصيل الحجز"
-          },
-          {
-          "scene": "التسوق",
-          "bot_char": "صاحب محل",
-          "user_char": "متسوق",
-          "background": "السوبر ماركت",
-          "skills": "مفردات البقالة، طلب المساعدة"
-          }
-          ]
-          },
-          "Darija_roman": {
-          "headers": ["Mshhed", "Shkhsyt albwt", "Shkhsyt almustkhdm", "Alkhlfyya", "Almaharat almuktasaba"],
-          "data": [
-          {
-          "scene": "تشتري ملابس",
-          "bot_char": "بائع",
-          "user_char": "زبون",
-          "background": "محل ملابس",
-          "skills": "مفردات التسوق، التفاوض"
-          },
-          {
-          "scene": "تبادل العملات",
-          "bot_char": "موظف بنك",
-          "user_char": "عميل",
-          "background": "البنك",
-          "skills": "تبادل العملات، الأرقام"
-          },
-          {
-          "scene": "التسجيل",
-          "bot_char": "موظف استقبال",
-          "user_char": "ضيف",
-          "background": "فندق",
-          "skills": "التقديم، تفاصيل الحجز"
-          },
-          {
-          "scene": "التسوق",
-          "bot_char": "صاحب محل",
-          "user_char": "متسوق",
-          "background": "السوبر ماركت",
-          "skills": "مفردات البقالة، طلب المساعدة"
-          }
-          ]
-          }
-          }
-  
+  "English": {
+    "headers": [
+      "Scene",
+      "Genie's Character",
+      "User's Character",
+      "Background",
+      "Skills to Learn"
+    ],
+    "data": [
+      {
+        "scene": "Buying clothes",
+        "bot_char": "Shopkeeper",
+        "user_char": "Customer",
+        "background": "Clothing store",
+        "skills": "Greetings, asking and giving information, expressing requests, thanking and accepting thanks, numbers, and colors"
+      },
+      {
+        "scene": "Exchanging currency",
+        "bot_char": "Bank teller",
+        "user_char": "Client",
+        "background": "Bank",
+        "skills": "Greetings, introductions, asking and giving information, expressing requests, thanking and accepting thanks, days, and numbers"
+      },
+      {
+        "scene": "Checking-in",
+        "bot_char": "Receptionist",
+        "user_char": "Guest",
+        "background": "Hotel",
+        "skills": "Greetings, introductions, asking and giving information, expressing requests, thanking and accepting thanks, making appointments and reservations, days, and numbers"
+      },
+      {
+        "scene": "Asking for directions",
+        "bot_char": "Local resident",
+        "user_char": "Tourist",
+        "background": "Street or public place",
+        "skills": "Greetings, introductions, asking and giving information, expressing requests, thanking and accepting thanks, cardinal directions, numbers, and colors."
+      }
+    ]
+  },
+  "French": {
+    "headers": [
+      "Scène",
+      "Personnage du Génie",
+      "Personnage de l'Utilisateur",
+      "Contexte",
+      "Compétences à apprendre"
+    ],
+    "data": [
+      {
+        "scene": "Acheter des vêtements",
+        "bot_char": "Vendeur",
+        "user_char": "Client",
+        "background": "Magasin de vêtements",
+        "skills": "Salutations, demander et donner des informations, exprimer des demandes, remercier et accepter les remerciements, nombres et couleurs"
+      },
+      {
+        "scene": "Échanger de la monnaie",
+        "bot_char": "Guichetier de banque",
+        "user_char": "Client",
+        "background": "Banque",
+        "skills": "Salutations, présentations, demander et donner des informations, exprimer des demandes, remercier et accepter les remerciements, jours et nombres"
+      },
+      {
+        "scene": "Enregistrement à l'hôtel",
+        "bot_char": "Réceptionniste",
+        "user_char": "Client",
+        "background": "Hôtel",
+        "skills": "Salutations, présentations, demander et donner des informations, exprimer des demandes, remercier et accepter les remerciements, prendre rendez-vous et réservations, jours et nombres"
+      },
+      {
+        "scene": "Demander des directions",
+        "bot_char": "Résident local",
+        "user_char": "Touriste",
+        "background": "Rue ou lieu public",
+        "skills": "Salutations, présentations, demander et donner des informations, exprimer des demandes, remercier et accepter les remerciements, directions cardinales, nombres et couleurs."
+      }
+    ]
+  },
+  "Darija_ar": {
+    "headers": [
+      "مشهد",
+      "شخصية البوت",
+      "شخصية المستخدم",
+      "الخلفية",
+      "المهارات المكتسبة"
+    ],
+    "data": [
+      {
+        "scene": "تشتري ملابس",
+        "bot_char": "بائع",
+        "user_char": "زبون",
+        "background": "محل ملابس",
+        "skills": "مفردات التسوق، التفاوض"
+      },
+      {
+        "scene": "تبادل العملات",
+        "bot_char": "موظف بنك",
+        "user_char": "عميل",
+        "background": "البنك",
+        "skills": "تبادل العملات، الأرقام"
+      },
+      {
+        "scene": "التسجيل",
+        "bot_char": "موظف استقبال",
+        "user_char": "ضيف",
+        "background": "فندق",
+        "skills": "التقديم، تفاصيل الحجز"
+      },
+      {
+        "scene": "التسوق",
+        "bot_char": "صاحب محل",
+        "user_char": "متسوق",
+        "background": "السوبر ماركت",
+        "skills": "مفردات البقالة، طلب المساعدة"
+      }
+    ]
+  },
+  "Darija_roman": {
+    "headers": [
+      "Mshhed",
+      "Shkhsyt albwt",
+      "Shkhsyt almustkhdm",
+      "Alkhlfyya",
+      "Almaharat almuktasaba"
+    ],
+    "data": [
+      {
+        "scene": "تشتري ملابس",
+        "bot_char": "بائع",
+        "user_char": "زبون",
+        "background": "محل ملابس",
+        "skills": "مفردات التسوق، التفاوض"
+      },
+      {
+        "scene": "تبادل العملات",
+        "bot_char": "موظف بنك",
+        "user_char": "عميل",
+        "background": "البنك",
+        "skills": "تبادل العملات، الأرقام"
+      },
+      {
+        "scene": "التسجيل",
+        "bot_char": "موظف استقبال",
+        "user_char": "ضيف",
+        "background": "فندق",
+        "skills": "التقديم، تفاصيل الحجز"
+      },
+      {
+        "scene": "التسوق",
+        "bot_char": "صاحب محل",
+        "user_char": "متسوق",
+        "background": "السوبر ماركت",
+        "skills": "مفردات البقالة، طلب المساعدة"
+      }
+    ]
+  }
+}

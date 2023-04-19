@@ -23,7 +23,7 @@ const App = () => {
   const logoRef = useRef(null);
   const audioRef = useRef(null);
   const [volume, setVolume] = useState(0.5);
-  const [showControls, setShowControls] = useState(false); 
+  const [showControls, setShowControls] = useState(false);
 
 
 
@@ -97,7 +97,7 @@ const App = () => {
     magicAudio.play();
     setShowOverlay(false);
     setStartAnimation(true);
-    setShowControls(true); 
+    setShowControls(true);
   };
 
 
@@ -187,27 +187,27 @@ const App = () => {
           )}
 
           {currentPage === 2 && (
-             <ChatScreen onPrevious={handlePrevious} language={language} />
-             )}
-           </div>
-         )}
+            <ChatScreen onPrevious={handlePrevious} language={language} />
+          )}
+        </div>
+      )}
 
 
-     {!showOverlay && (
-      <div className="footer">
-        <p>
-          Built with ❤️ by{" "}
-          <a
-            href="https://hamzaelalaoui.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Hamza El Alaoui
-          </a>
-        </p>
-      </div>
-    )}
-  </div> 
-  ); 
-}; 
+      {!showOverlay && (
+        <div className="footer">
+          <p>
+            Built with ❤️ by{" "}
+            <a
+              href="https://hamzaelalaoui.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Hamza El Alaoui
+            </a>
+          </p>
+        </div>
+      )}
+    </div>
+  );
+};
 export default App; 
