@@ -48,9 +48,8 @@ const ExplanationPage = ({ onNext, onPrevious, language }) => {
     <div className={styles.backgroundHeader}>
       <div className={styles.papyruscontainer}>
         <h1
-          className={`${styles.text} ${
-            language === "Darija_ar" ? styles["text-ar"] : ""
-          }`}
+          className={`${styles.text} ${language === "Darija_ar" ? styles["text-ar"] : ""
+            }`}
           dangerouslySetInnerHTML={{ __html: text }}
         ></h1>
       </div>
@@ -72,7 +71,10 @@ const ExplanationPage = ({ onNext, onPrevious, language }) => {
 
       <div class={styles.tableContainer}>
         <div class={styles.tableWrapper}>
-          <table className={styles.languageTable}>
+
+          <table className={`${styles.languageTable} 
+           ${language === "Darija_ar" ? styles["languageTable-ar"] : "" }`} >
+
             <thead>
               <tr>
                 {headers.map((header, index) => (
@@ -92,11 +94,11 @@ const ExplanationPage = ({ onNext, onPrevious, language }) => {
               ))}
             </tbody>
           </table>
-          
+
         </div>
-        
+
       </div>
-      
+
 
     </div>
   );

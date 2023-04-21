@@ -79,79 +79,79 @@
   },
   "Darija_ar": {
     "headers": [
-      "مشهد",
-      "شخصية البوت",
-      "شخصية المستخدم",
+      "سيناريوات",
+      "الشخصية ديال لجني",
+      "شخصية ديالك",
       "الخلفية",
-      "المهارات المكتسبة"
+      "لحويج لي غادي تتعلم"
     ],
     "data": [
       {
-        "scene": "تشتري ملابس",
-        "bot_char": "بائع",
-        "user_char": "زبون",
-        "background": "محل ملابس",
-        "skills": "مفردات التسوق، التفاوض"
+        "scene": "شريان لحويج",
+        "bot_char": "مول لمحال",
+        "user_char":  "لكليان",
+        "background":  "محال ديال لحويج",
+        "skills":  "كيفاش تسلم, كيفاش تعطي وتاخد لمعلومات, كيفاش تطلب شي حاجة, كيفاش تشكل شي حد وتتقبل الشكر, الأرقام, الألوان"
       },
       {
-        "scene": "تبادل العملات",
-        "bot_char": "موظف بنك",
-        "user_char": "عميل",
-        "background": "البنك",
-        "skills": "تبادل العملات، الأرقام"
+        "scene":  "صرف لفلوس",
+        "bot_char":  "موضف فبنكة",
+        "user_char":  "لكليان",
+        "background":  "بنكة",
+        "skills": "كيفاش تسلم, كيفاش تعطي وتاخد لمعلومات, التعارف, كيفاش تطلب شي حاجة, كيفاش تشكر شي حد وتتقبل الشكر, الأرقام, الأيام"
       },
       {
-        "scene": "التسجيل",
-        "bot_char": "موظف استقبال",
-        "user_char": "ضيف",
-        "background": "فندق",
-        "skills": "التقديم، تفاصيل الحجز"
+        "scene": "تسجل فأوطيل",
+        "bot_char":  "موضف فالاستقبال",
+        "user_char":  "لكليان",
+        "background":  "أوطيل",
+        "skills":  ",  كيفاش تدير رونديفو و كيفاش تريسيرفي, كيفاش تسلم, كيفاش تعطي وتاخد لمعلومات, كيفاش تطلب شي حاجة, كيفاش تشكر شي حد وتتقبل الشكر, الأرقام, الأيام"
       },
       {
-        "scene": "التسوق",
-        "bot_char": "صاحب محل",
-        "user_char": "متسوق",
-        "background": "السوبر ماركت",
-        "skills": "مفردات البقالة، طلب المساعدة"
+        "scene":  "تسول على طريق",
+        "bot_char":  "شي حد فزنقة",
+        "user_char":  "توريست",
+        "background":  "زنقا أو شارع",
+        "skills":  "كيفاش تسلم, كيفاش تعطي وتاخد لمعلومات, التعارف, كيفاش تطلب شي حاجة, كيفاش تشكر شي حد وتتقبل الشكر, الأرقام, الألوان , النعت ديال طريق"
       }
     ]
   },
   "Darija_roman": {
     "headers": [
-      "Mshhed",
-      "Shkhsyt albwt",
-      "Shkhsyt almustkhdm",
-      "Alkhlfyya",
-      "Almaharat almuktasaba"
+      "Scenarioat",
+      "Cha5sya dial L'jini",
+      "Cheasya dialek",
+      "l5alfya",
+      "le7wayj lli ghadi t3lem"
     ],
     "data": [
       {
-        "scene": "تشتري ملابس",
-        "bot_char": "بائع",
-        "user_char": "زبون",
-        "background": "محل ملابس",
-        "skills": "مفردات التسوق، التفاوض"
+        "scene": "Cheryan le7wij",
+        "bot_char": "Mol lma7al",
+        "user_char": "L'Klian",
+        "background": "Ma7al d'le7wayj",
+        "skills": "Kifach T'sellem, te3ti wtakhoud lma3lomat, tetleb chi 7aja, techkor chi 7ed wet9abel chokr, L'ar9am, L'alwan"
       },
       {
-        "scene": "تبادل العملات",
-        "bot_char": "موظف بنك",
-        "user_char": "عميل",
-        "background": "البنك",
-        "skills": "تبادل العملات، الأرقام"
+        "scene": "T7awwel L'flous",
+        "bot_char": "Mowadaf f Banka",
+        "user_char": "L'Klian",
+        "background": "L'Banka",
+        "skills": "Kifach T'sellem, ta3arof, te3ti w takhoud lma3lomat, tetleb chi 7aja, techkor chi 7ed wet9abel chokr, L'ar9am, L'2ayam"
       },
       {
-        "scene": "التسجيل",
-        "bot_char": "موظف استقبال",
-        "user_char": "ضيف",
-        "background": "فندق",
-        "skills": "التقديم، تفاصيل الحجز"
+        "scene": "Tsejel F'Otiil",
+        "bot_char": "Mowadaf F'lreception",
+        "user_char": "L'Klian",
+        "background": "Otiil",
+        "skills": "Kifach T'sellem, ta3arof, te3ti wtakhoud lma3lomat, tetleb chi 7aja, techkor chi 7ed wet9abel chokr, tdir Rendez-vous w reservation, L'ar9am, L'2ayam"
       },
       {
-        "scene": "التسوق",
-        "bot_char": "صاحب محل",
-        "user_char": "متسوق",
-        "background": "السوبر ماركت",
-        "skills": "مفردات البقالة، طلب المساعدة"
+        "scene": "T'sewel 3la tri9",
+        "bot_char": "Chi 7ed F'zen9a",
+        "user_char": "Tourist",
+        "background": "Zen9a / chari3",
+        "skills": "Kifach T'sellem, ta3arof, te3ti w takhoud lma3lomat, tetleb chi 7aja, techkor chi 7ed wet9abel chokr, Ne33t dial tri9, L'ar9am, L'alwan"
       }
     ]
   }

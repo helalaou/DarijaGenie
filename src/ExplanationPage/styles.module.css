@@ -163,3 +163,17 @@
 .languageTable tr:nth-child(even) {
   background-color: #d9cead;
 }
+
+.languageTable-ar {
+  direction: rtl;
+  unicode-bidi: bidi-override;
+}
+
+.languageTable-ar th,
+.languageTable-ar td {
+  text-align: right;
+}
+
+.languageTable-ar th {
+  text-transform: none; 
+}
