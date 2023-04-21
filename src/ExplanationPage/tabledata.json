@@ -89,30 +89,30 @@
       {
         "scene": "شريان لحويج",
         "bot_char": "مول لمحال",
-        "user_char":  "لكليان",
-        "background":  "محال ديال لحويج",
-        "skills":  "كيفاش تسلم, كيفاش تعطي وتاخد لمعلومات, كيفاش تطلب شي حاجة, كيفاش تشكل شي حد وتتقبل الشكر, الأرقام, الألوان"
+        "user_char": "لكليان",
+        "background": "محال ديال لحويج",
+        "skills": "كيفاش تسلم, كيفاش تعطي وتاخد لمعلومات, كيفاش تطلب شي حاجة, كيفاش تشكل شي حد وتتقبل الشكر, الأرقام, الألوان"
       },
       {
-        "scene":  "صرف لفلوس",
-        "bot_char":  "موضف فبنكة",
-        "user_char":  "لكليان",
-        "background":  "بنكة",
+        "scene": "صرف لفلوس",
+        "bot_char": "موضف فبنكة",
+        "user_char": "لكليان",
+        "background": "بنكة",
         "skills": "كيفاش تسلم, كيفاش تعطي وتاخد لمعلومات, التعارف, كيفاش تطلب شي حاجة, كيفاش تشكر شي حد وتتقبل الشكر, الأرقام, الأيام"
       },
       {
         "scene": "تسجل فأوطيل",
-        "bot_char":  "موضف فالاستقبال",
-        "user_char":  "لكليان",
-        "background":  "أوطيل",
-        "skills":  ",  كيفاش تدير رونديفو و كيفاش تريسيرفي, كيفاش تسلم, كيفاش تعطي وتاخد لمعلومات, كيفاش تطلب شي حاجة, كيفاش تشكر شي حد وتتقبل الشكر, الأرقام, الأيام"
+        "bot_char": "موضف فالاستقبال",
+        "user_char": "لكليان",
+        "background": "أوطيل",
+        "skills": ",  كيفاش تدير رونديفو و كيفاش تريسيرفي, كيفاش تسلم, كيفاش تعطي وتاخد لمعلومات, كيفاش تطلب شي حاجة, كيفاش تشكر شي حد وتتقبل الشكر, الأرقام, الأيام"
       },
       {
-        "scene":  "تسول على طريق",
-        "bot_char":  "شي حد فزنقة",
-        "user_char":  "توريست",
-        "background":  "زنقا أو شارع",
-        "skills":  "كيفاش تسلم, كيفاش تعطي وتاخد لمعلومات, التعارف, كيفاش تطلب شي حاجة, كيفاش تشكر شي حد وتتقبل الشكر, الأرقام, الألوان , النعت ديال طريق"
+        "scene": "تسول على طريق",
+        "bot_char": "شي حد فزنقة",
+        "user_char": "توريست",
+        "background": "زنقا أو شارع",
+        "skills": "كيفاش تسلم, كيفاش تعطي وتاخد لمعلومات, التعارف, كيفاش تطلب شي حاجة, كيفاش تشكر شي حد وتتقبل الشكر, الأرقام, الألوان , النعت ديال طريق"
       }
     ]
   },
@@ -130,28 +130,28 @@
         "bot_char": "Mol lma7al",
         "user_char": "L'Klian",
         "background": "Ma7al d'le7wayj",
-        "skills": "Kifach T'sellem, te3ti wtakhoud lma3lomat, tetleb chi 7aja, techkor chi 7ed wet9abel chokr, L'ar9am, L'alwan"
+        "skills": "Kifach T'sellem,kifach te3ti wtakhoud lma3lomat,kifach tetleb chi 7aja,kifach techkor chi 7ed wet9abel chokr, L'ar9am, L'alwan"
       },
       {
         "scene": "T7awwel L'flous",
         "bot_char": "Mowadaf f Banka",
         "user_char": "L'Klian",
         "background": "L'Banka",
-        "skills": "Kifach T'sellem, ta3arof, te3ti w takhoud lma3lomat, tetleb chi 7aja, techkor chi 7ed wet9abel chokr, L'ar9am, L'2ayam"
+        "skills": "Kifach T'sellem, ta3arof, kifach te3ti w takhoud lma3lomat,kifach tetleb chi 7aja,kifach techkor chi 7ed wet9abel chokr, L'ar9am, L'2ayam"
       },
       {
         "scene": "Tsejel F'Otiil",
         "bot_char": "Mowadaf F'lreception",
         "user_char": "L'Klian",
         "background": "Otiil",
-        "skills": "Kifach T'sellem, ta3arof, te3ti wtakhoud lma3lomat, tetleb chi 7aja, techkor chi 7ed wet9abel chokr, tdir Rendez-vous w reservation, L'ar9am, L'2ayam"
+        "skills": "Kifach T'sellem, ta3arof,kifach te3ti wtakhoud lma3lomat,kifach tetleb chi 7aja,kifach techkor chi 7ed wet9abel chokr,kifach tdir Rendez-vous w reservation, L'ar9am, L'2ayam"
       },
       {
         "scene": "T'sewel 3la tri9",
         "bot_char": "Chi 7ed F'zen9a",
         "user_char": "Tourist",
         "background": "Zen9a / chari3",
-        "skills": "Kifach T'sellem, ta3arof, te3ti w takhoud lma3lomat, tetleb chi 7aja, techkor chi 7ed wet9abel chokr, Ne33t dial tri9, L'ar9am, L'alwan"
+        "skills": "Kifach T'sellem,kifach te3ti w takhoud lma3lomat,kifach tetleb chi 7aja,kifach techkor chi 7ed wet9abel chokr, Ne33t dial tri9, L'ar9am, L'alwan"
       }
     ]
   }

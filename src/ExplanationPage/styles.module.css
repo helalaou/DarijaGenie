@@ -127,7 +127,7 @@
   justify-content: center;
   align-items: flex-end;
   padding-bottom: 30px;
-  margin-bottom: 19%;
+  margin-bottom: 25%;
   margin-top: 15%;  
   z-index: 1;
 }
@@ -140,7 +140,7 @@
   font-family: 'El Messiri', sans-serif;
   background-color: #fef7e6;
   color: #3d3b3a; 
-  bottom:  -53%;
+  bottom:  -65%;
   position: absolute; 
   
 }
@@ -177,3 +177,5 @@
 .languageTable-ar th {
   text-transform: none; 
 }
+
+
