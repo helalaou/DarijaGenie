@@ -178,4 +178,174 @@
   text-transform: none; 
 }
 
+/* Responsive styles for papyrus and table */
+@media (max-width: 768px) {
+  .papyrus {
+    width: 90%;
+    max-width: 300px;
+    margin: 0 auto 15px;
+    max-height: 40vh; /* Reduce height for mobile */
+    transform: scale(0.7); /* Shrink the papyrus by 30% */
+    transform-origin: top center; /* Scale from the top center */
+  }
+
+  .table-container {
+    overflow-x: visible;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  /* Convert table to vertical layout */
+  table, thead, tbody, th, td, tr {
+    display: block;
+  }
+
+  thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+
+  tr {
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+  }
+
+  td {
+    border: none;
+    position: relative;
+    padding-left: 50%;
+    text-align: left;
+  }
+
+  td:before {
+    content: attr(data-label);
+    position: absolute;
+    left: 6px;
+    width: 45%;
+    padding-right: 10px;
+    white-space: nowrap;
+    font-weight: bold;
+  }
+
+  /* RTL support for Arabic */
+  .rtl table {
+    direction: rtl;
+  }
+
+  .rtl td {
+    text-align: right;
+    padding-right: 50%;
+    padding-left: 0;
+  }
+
+  .rtl td:before {
+    right: 6px;
+    left: auto;
+    text-align: right;
+  }
+}
+
+/* For even smaller screens */
+@media (max-width: 480px) {
+  .papyrus {
+    width: 95%;
+    max-width: 250px;
+    transform: scale(0.6); /* Shrink the papyrus by 40% */
+  }
+}
+
+/* Existing media queries... */
+
+/* Existing styles... */
+
+.chatWindow {
+  width: 80%;
+  max-width: 800px;
+  margin: 20px auto;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.slackTelegramContainer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.slackContainer, .telegramContainer {
+  text-align: center;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .chatWindow {
+    width: 95%;
+    max-width: 400px;
+    margin: 10px auto;
+  }
+
+  .papyrus {
+    width: 90%;
+    max-width: 300px;
+    margin: 0 auto 15px;
+    max-height: 40vh;
+    transform: scale(0.7);
+    transform-origin: top center;
+  }
+
+  .slackTelegramContainer {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .slackContainer, .telegramContainer {
+    width: 100%;
+  }
+
+  /* Adjust font sizes for better readability on mobile */
+  body {
+    font-size: 14px;
+  }
+
+  h1, h2 {
+    font-size: 1.5em;
+  }
+
+  /* Make buttons more touch-friendly */
+  button {
+    padding: 12px 20px;
+    font-size: 16px;
+  }
+}
+
+/* For even smaller screens */
+@media (max-width: 480px) {
+  .chatWindow {
+    width: 98%;
+    max-width: 320px;
+  }
+
+  .papyrus {
+    width: 95%;
+    max-width: 250px;
+    transform: scale(0.6);
+  }
+
+  /* Further reduce font sizes if needed */
+  body {
+    font-size: 13px;
+  }
+
+  h1, h2 {
+    font-size: 1.3em;
+  }
+}
+
+/* ... rest of the existing styles ... */
 

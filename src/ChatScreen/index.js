@@ -90,7 +90,7 @@ const ChatScreen = ({ onPrevious, language }) => {
             </figure>
           </a>
 
-          <a className={styles.imageLink} onClick={handleMicrosoftTeamsClick}>
+          <a href="#" className={styles.imageLink} onClick={handleMicrosoftTeamsClick}>
             <figure>
               <img src={teamsQRCode} alt="Teams QR code" />
               <figcaption className="image-text">Microsoft Teams</figcaption>
