@@ -2,8 +2,7 @@ import React, { useState, useEffect } from "react";
 import styles from "./styles.module.css";
 import { getButtonTexts } from "../LanguageSelector";
 import IframeEmbed from "./IframeEmbed";
-import slackQRCode from './assets/QRcard-slack.jpg';
-import teamsQRCode from './assets/QRcard-teams.jpg';
+import slackQRCode from './assets/QRcard-slack.jpg'; 
 import messengerQRCode from './assets/QRcard-messenger.jpg';
 import telegramQRCode from './assets/QRcard-telegram.jpg';
 
@@ -27,11 +26,7 @@ const ChatScreen = ({ onPrevious, language }) => {
 
     }
   };
-
-  const handleMicrosoftTeamsClick = () => {
-    setShowPopup(true);
-  };
-
+ 
   const handleClosePopup = () => {
     setShowPopup(false);
   };
@@ -90,33 +85,14 @@ const ChatScreen = ({ onPrevious, language }) => {
             </figure>
           </a>
 
-          <a href="" className={styles.imageLink} onClick={handleMicrosoftTeamsClick}>
-            <figure>
-              <img src={teamsQRCode} alt="Teams QR code" />
-              <figcaption className="image-text">Microsoft Teams</figcaption>
-            </figure>
-          </a>
+          
         </div>
 
 
 
       </div>
 
-      {showPopup && (
-        <div className={styles.popup}>
-          <div className={styles.popupContent}>
-            <h3>Use DarijaGenie on Microsoft Teams</h3>
-            <p><strong>1.</strong> Open Microsoft Teams and sign in.</p>
-            <p><strong>2.</strong> In the search bar at the top of the application, paste the chatbot's unique ID: 54f9a37e-0055-42b3-967d-e3d2ec5c884d</p>
-            <p><strong>3.</strong> Press Enter to start the search.</p>
-            <p><strong>4.</strong> Click on the "People" tab, and the Darija Genie should appear in the search results.</p>
-            <p><strong>5.</strong> Click on the chatbot to start or continue a conversation with it.</p>
-            <button className={styles.closeButton} onClick={handleClosePopup}>
-              Close
-            </button>
-          </div>
-        </div>
-      )}
+       
 
 
       <div
